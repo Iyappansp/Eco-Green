@@ -20,7 +20,7 @@
         <!-- Mobile Toggle Header -->
         <div class="lg:hidden sticky top-0 z-[60] flex items-center justify-between p-4 bg-slate-900/60 backdrop-blur-xl border-b border-emerald-500/20">
             <a href="index.html" class="flex items-center gap-2">
-                <img src="assets/logo.png" alt="Logo" class="h-8 w-auto">
+                <img src="assets/logo.png" alt="Logo" class="h-10 w-auto hover:opacity-80 transition">
             </a>
             <button id="dashboardMobileMenuBtn" class="p-2 hover:bg-emerald-500/10 rounded-lg transition text-emerald-400">
                 <i class="bi bi-grid-fill text-2xl"></i>
@@ -30,165 +30,281 @@
         <div class="grid lg:grid-cols-5 min-h-screen gap-4">
             <!-- Sidebar -->
             <div id="dashboardSidebar" class="hidden lg:block lg:col-span-1 bg-slate-900/40 backdrop-blur-md border-r border-emerald-500/20 p-6 fixed lg:relative inset-y-0 left-0 w-64 lg:w-auto z-50 transition-all duration-300">
-            <div class="mb-10 px-4">
-                <a href="index.html">
-                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-12 w-auto">
-                </a>
-            </div>
-            <div class="space-y-4">
-                <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 bg-emerald-500 text-white rounded-lg transition">
-                    <i class="bi bi-speedometer2"></i>
-                    <span>Dashboard</span>
-                </a>
-                <a href="shop.html" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-emerald-500/10 rounded-lg transition">
-                    <i class="bi bi-bag"></i>
-                    <span>Shop Products</span>
-                </a>
-                <a href="refill-station.html" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-emerald-500/10 rounded-lg transition">
-                    <i class="bi bi-geo-alt"></i>
-                    <span>Refill Station</span>
-                </a>
-                <a href="membership.html" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-emerald-500/10 rounded-lg transition">
-                    <i class="bi bi-person-badge"></i>
-                    <span>Membership</span>
-                </a>
-                <a href="impact.html" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-emerald-500/10 rounded-lg transition">
-                    <i class="bi bi-graph-up"></i>
-                    <span>My Impact</span>
-                </a>
-                <a href="community.html" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-emerald-500/10 rounded-lg transition">
-                    <i class="bi bi-people"></i>
-                    <span>Community</span>
-                </a>
-                <div class="border-t border-emerald-500/20 my-4"></div>
-                <a href="contact.html" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-emerald-500/10 rounded-lg transition">
-                    <i class="bi bi-question-circle"></i>
-                    <span>Support</span>
-                </a>
-                <a href="#" id="logoutBtn" class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-emerald-500/10 rounded-lg transition">
-                    <i class="bi bi-box-arrow-left"></i>
-                    <span>Logout</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Sidebar Overlay (for mobile) -->
-        <div id="sidebarOverlay" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"></div>
-
-        <!-- Main Content -->
-        <div class="lg:col-span-4 p-6">
-            <!-- Welcome Section -->
-            <div class="mb-8">
-                <h1 class="text-4xl font-bold mb-2">Welcome back, Priya!</h1>
-                <p class="text-slate-400">Here's your sustainability dashboard</p>
-            </div>
-
-            <!-- Stats Grid -->
-            <div class="grid md:grid-cols-3 gap-6 mb-8">
-                <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="font-semibold text-slate-300">This Month</h3>
-                        <div class="text-2xl">♻️</div>
-                    </div>
-                    <div class="text-3xl font-bold text-emerald-400 mb-2">
-                        <span class="counter" data-target="35">0</span> kg
-                    </div>
-                    <p class="text-sm text-slate-400">Plastic saved</p>
+                <div class="mb-10 px-4">
+                    <a href="index.html" class="inline-block hover:scale-105 transition-transform duration-300">
+                        <img src="assets/logo.png" alt="EcoRefill Logo" class="h-25 w-auto">
+                    </a>
                 </div>
+                <nav class="space-y-2">
+                    <button data-section="dashboard" class="sidebar-link w-full flex items-center gap-3 px-4 py-3 bg-emerald-500 text-white rounded-lg transition-all duration-300">
+                        <i class="bi bi-speedometer2"></i>
+                        <span>Dashboard</span>
+                    </button>
+                    <button data-section="shop" class="sidebar-link w-full flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-emerald-500/10 rounded-lg transition-all duration-300">
+                        <i class="bi bi-bag"></i>
+                        <span>Shop Products</span>
+                    </button>
+                    <button data-section="refills" class="sidebar-link w-full flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-emerald-500/10 rounded-lg transition-all duration-300">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>Refill Stations</span>
+                    </button>
+                    <button data-section="membership" class="sidebar-link w-full flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-emerald-500/10 rounded-lg transition-all duration-300">
+                        <i class="bi bi-person-badge"></i>
+                        <span>Membership</span>
+                    </button>
+                    <button data-section="impact" class="sidebar-link w-full flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-emerald-500/10 rounded-lg transition-all duration-300">
+                        <i class="bi bi-graph-up"></i>
+                        <span>My Impact</span>
+                    </button>
+                    <button data-section="community" class="sidebar-link w-full flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-emerald-500/10 rounded-lg transition-all duration-300">
+                        <i class="bi bi-people"></i>
+                        <span>Community</span>
+                    </button>
+                    
+                    <div class="border-t border-emerald-500/20 my-4"></div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle" class="w-full flex items-center justify-between px-4 py-3 text-slate-400 hover:bg-emerald-500/10 rounded-lg transition-all duration-300">
+                        <div class="flex items-center gap-3">
+                            <i class="bi bi-palette"></i>
+                            <span>Theme Mode</span>
+                        </div>
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
 
-                <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="font-semibold text-slate-300">Refill Credits</h3>
-                        <div class="text-2xl">🎁</div>
-                    </div>
-                    <div class="text-3xl font-bold text-emerald-400 mb-2">
-                        <span class="counter" data-target="245">0</span>
-                    </div>
-                    <p class="text-sm text-slate-400">Available to redeem</p>
-                </div>
+                    <!-- RTL Toggle -->
+                    <button id="rtlToggle" class="w-full flex items-center justify-between px-4 py-3 text-slate-400 hover:bg-emerald-500/10 rounded-lg transition-all duration-300">
+                        <div class="flex items-center gap-3">
+                            <i class="bi bi-translate"></i>
+                            <span>Switch Language</span>
+                        </div>
+                        <span class="text-xs font-bold px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 rounded">RTL</span>
+                    </button>
 
-                <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="font-semibold text-slate-300">Membership</h3>
-                        <div class="text-2xl">🌱</div>
-                    </div>
-                    <div class="text-3xl font-bold text-emerald-400 mb-2">Eco Pro</div>
-                    <p class="text-sm text-slate-400">Renews on May 15, 2026</p>
-                </div>
+                    <button id="logoutBtn" class="w-full flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-red-500/10 hover:text-red-400 rounded-lg transition-all duration-300 cursor-pointer relative z-[60]">
+                        <i class="bi bi-box-arrow-left"></i>
+                        <span>Logout</span>
+                    </button>
+                </nav>
             </div>
 
-            <!-- Recent Orders -->
-            <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-6 mb-8">
-                <h2 class="text-2xl font-bold mb-6">Recent Refills</h2>
+            <!-- Sidebar Overlay (for mobile) -->
+            <div id="sidebarOverlay" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"></div>
+
+            <!-- Main Content Area -->
+            <div id="mainContent" class="lg:col-span-4 p-6 min-h-screen">
                 
-                <div class="space-y-4">
-                    <div class="flex items-center justify-between p-4 bg-slate-700/30 rounded-lg border border-emerald-500/10 hover:border-emerald-500/30 transition">
-                        <div class="flex items-center gap-4">
-                            <div class="text-3xl">🌾</div>
-                            <div>
-                                <p class="font-semibold">Organic Wheat Berries</p>
-                                <p class="text-sm text-slate-400">Refilled on March 28, 2026</p>
+                <!-- Section: Dashboard -->
+                <div id="section-dashboard" class="spa-section active-section">
+                    <!-- Welcome Section -->
+                    <div class="mb-8">
+                        <h1 class="text-4xl font-bold mb-2">Welcome back, Priya!</h1>
+                        <p class="text-slate-400">Here's your sustainability dashboard</p>
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="font-semibold text-slate-300">This Month</h3>
+                                <div class="text-2xl">♻️</div>
                             </div>
+                            <div class="text-3xl font-bold text-emerald-400 mb-2">
+                                <span class="counter" data-target="35">0</span> kg
+                            </div>
+                            <p class="text-sm text-slate-400">Plastic saved</p>
                         </div>
-                        <div class="text-right">
-                            <p class="font-bold text-emerald-400">2 kg</p>
-                            <p class="text-sm text-slate-400">₹900</p>
+
+                        <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="font-semibold text-slate-300">Refill Credits</h3>
+                                <div class="text-2xl">🎁</div>
+                            </div>
+                            <div class="text-3xl font-bold text-emerald-400 mb-2">
+                                <span class="counter" data-target="245">0</span>
+                            </div>
+                            <p class="text-sm text-slate-400">Available to redeem</p>
+                        </div>
+
+                        <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="font-semibold text-slate-300">Membership</h3>
+                                <div class="text-2xl">🌱</div>
+                            </div>
+                            <div class="text-3xl font-bold text-emerald-400 mb-2">Eco Pro</div>
+                            <p class="text-sm text-slate-400">Renews on May 15, 2026</p>
                         </div>
                     </div>
 
-                    <div class="flex items-center justify-between p-4 bg-slate-700/30 rounded-lg border border-emerald-500/10 hover:border-emerald-500/30 transition">
-                        <div class="flex items-center gap-4">
-                            <div class="text-3xl">🧼</div>
-                            <div>
-                                <p class="font-semibold">Eco Cleaner Refill</p>
-                                <p class="text-sm text-slate-400">Refilled on March 25, 2026</p>
+                    <!-- Recent Orders -->
+                    <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Recent Refills</h2>
+                        <div class="space-y-4">
+                            <!-- Refill Row 1 -->
+                            <div class="flex items-center justify-between p-4 bg-slate-700/30 rounded-lg border border-emerald-500/10 hover:border-emerald-500/30 transition">
+                                <div class="flex items-center gap-4">
+                                    <div class="text-3xl">🌾</div>
+                                    <div>
+                                        <p class="font-semibold">Organic Wheat Berries</p>
+                                        <p class="text-sm text-slate-400">Refilled on March 28, 2026</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <p class="font-bold text-emerald-400">2 kg</p>
+                                    <p class="text-sm text-slate-400">₹900</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="text-right">
-                            <p class="font-bold text-emerald-400">500ml</p>
-                            <p class="text-sm text-slate-400">₹150</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between p-4 bg-slate-700/30 rounded-lg border border-emerald-500/10 hover:border-emerald-500/30 transition">
-                        <div class="flex items-center gap-4">
-                            <div class="text-3xl">🌶️</div>
-                            <div>
-                                <p class="font-semibold">Turmeric Powder</p>
-                                <p class="text-sm text-slate-400">Refilled on March 20, 2026</p>
+                            <!-- Refill Row 2 -->
+                            <div class="flex items-center justify-between p-4 bg-slate-700/30 rounded-lg border border-emerald-500/10 hover:border-emerald-500/30 transition">
+                                <div class="flex items-center gap-4">
+                                    <div class="text-3xl">🧼</div>
+                                    <div>
+                                        <p class="font-semibold">Eco Cleaner Refill</p>
+                                        <p class="text-sm text-slate-400">Refilled on March 25, 2026</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <p class="font-bold text-emerald-400">500ml</p>
+                                    <p class="text-sm text-slate-400">₹150</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="text-right">
-                            <p class="font-bold text-emerald-400">500g</p>
-                            <p class="text-sm text-slate-400">₹140</p>
                         </div>
                     </div>
                 </div>
 
-                <button class="w-full mt-6 py-2 border border-emerald-500 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition">
-                    View All Orders
-                </button>
-            </div>
-
-            <!-- Quick Actions -->
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 border border-emerald-500 rounded-2xl p-8 text-center">
-                    <div class="text-5xl mb-4">🛒</div>
-                    <h3 class="text-xl font-bold mb-2">Continue Shopping</h3>
-                    <p class="text-slate-300 mb-6">Browse our full range of zero-waste products</p>
-                    <a href="shop.html" class="inline-block px-6 py-2 bg-emerald-500 text-white font-bold rounded-lg hover:bg-emerald-600 transition">
-                        Go to Shop
-                    </a>
+                <!-- Section: Shop -->
+                <div id="section-shop" class="spa-section hidden">
+                    <div class="mb-8 flex items-center justify-between">
+                        <div>
+                            <h1 class="text-4xl font-bold mb-2">Shop Zero-Waste</h1>
+                            <p class="text-slate-400">Browse and order your favorite sustainable products</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="p-2 bg-slate-800 border border-emerald-500/20 rounded-lg hover:border-emerald-500 transition"><i class="bi bi-filter"></i></button>
+                            <button class="p-2 bg-slate-800 border border-emerald-500/20 rounded-lg hover:border-emerald-500 transition"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Shop Card 1 -->
+                        <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300">
+                            <div class="w-full h-40 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-xl mb-4 flex items-center justify-center text-4xl relative overflow-hidden">
+                                🌾
+                                <span class="absolute top-2 right-2 px-2 py-0.5 bg-emerald-500 text-white text-[10px] font-bold rounded">BESTSELLER</span>
+                            </div>
+                            <h3 class="font-bold mb-1">Organic Wheat Berries</h3>
+                            <p class="text-sm text-slate-400 mb-4">Premium organic grains from local farms.</p>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-emerald-400 font-bold block">₹450/kg</span>
+                                    <span class="text-[10px] text-slate-500 line-through">₹520</span>
+                                </div>
+                                <button class="flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white text-sm font-bold rounded-lg hover:bg-emerald-600 transition">
+                                    <i class="bi bi-bag-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Shop Card 2 -->
+                        <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300">
+                            <div class="w-full h-40 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-xl mb-4 flex items-center justify-center text-4xl">🌶️</div>
+                            <h3 class="font-bold mb-1">Turmeric Powder</h3>
+                            <p class="text-sm text-slate-400 mb-4">Pure, freshly ground turmeric with high curcumin.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-emerald-400 font-bold">₹280/kg</span>
+                                <button class="flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white text-sm font-bold rounded-lg hover:bg-emerald-600 transition">
+                                    <i class="bi bi-bag-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Shop Card 3 -->
+                        <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300">
+                            <div class="w-full h-40 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-xl mb-4 flex items-center justify-center text-4xl">🧼</div>
+                            <h3 class="font-bold mb-1">Eco Cleaner Refill</h3>
+                            <p class="text-sm text-slate-400 mb-4">Plant-based, biodegradable liquid cleaner.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-emerald-400 font-bold">₹150/500ml</span>
+                                <button class="flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white text-sm font-bold rounded-lg hover:bg-emerald-600 transition">
+                                    <i class="bi bi-bag-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 border border-emerald-500 rounded-2xl p-8 text-center">
-                    <div class="text-5xl mb-4">📍</div>
-                    <h3 class="text-xl font-bold mb-2">Book Refill Slot</h3>
-                    <p class="text-slate-300 mb-6">Schedule your next refill pickup today</p>
-                    <a href="refill-station.html" class="inline-block px-6 py-2 bg-emerald-500 text-white font-bold rounded-lg hover:bg-emerald-600 transition">
-                        Book Now
-                    </a>
+                <!-- Section: Refills -->
+                <div id="section-refills" class="spa-section hidden">
+                    <div class="mb-8">
+                        <h1 class="text-4xl font-bold mb-2">Refill Stations</h1>
+                        <p class="text-slate-400">Find a station near you and book your slot</p>
+                    </div>
+                    <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-8 text-center">
+                        <div class="text-6xl mb-4">📍</div>
+                        <h3 class="text-xl font-bold mb-2">Coming Soon to Your Area</h3>
+                        <p class="text-slate-400 mb-6">We're expanding our refill network. Stay tuned!</p>
+                        <button class="px-6 py-2 bg-emerald-500 text-white font-bold rounded-lg hover:bg-emerald-600 transition">Notify Me</button>
+                    </div>
                 </div>
+
+                <!-- Section: Membership -->
+                <div id="section-membership" class="spa-section hidden">
+                    <div class="mb-8">
+                        <h1 class="text-4xl font-bold mb-2">Your Membership</h1>
+                        <p class="text-slate-400">Manage your subscription and view benefits</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-emerald-900/40 to-teal-900/40 border border-emerald-500/50 rounded-2xl p-8">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center text-3xl">🌱</div>
+                            <div>
+                                <h2 class="text-2xl font-bold">Eco Pro Plan</h2>
+                                <p class="text-emerald-400">Active since Jan 2026</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 text-slate-300 mb-8">
+                            <li class="flex items-center gap-3"><i class="bi bi-check-circle-fill text-emerald-400"></i> Free home delivery on orders over ₹500</li>
+                            <li class="flex items-center gap-3"><i class="bi bi-check-circle-fill text-emerald-400"></i> 10% extra refill credits every month</li>
+                            <li class="flex items-center gap-3"><i class="bi bi-check-circle-fill text-emerald-400"></i> Early access to new station launches</li>
+                        </ul>
+                        <button class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl transition">Manage Subscription</button>
+                    </div>
+                </div>
+
+                <!-- Section: Impact -->
+                <div id="section-impact" class="spa-section hidden">
+                    <div class="mb-8">
+                        <h1 class="text-4xl font-bold mb-2">My Impact</h1>
+                        <p class="text-slate-400">Track your environmental contribution</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-6">
+                            <h3 class="font-bold mb-4">Trees Saved</h3>
+                            <div class="text-5xl font-bold text-emerald-400 mb-2">12.4</div>
+                            <p class="text-slate-400">Equivalent carbon offset</p>
+                        </div>
+                        <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-6">
+                            <h3 class="font-bold mb-4">Landfill Diverted</h3>
+                            <div class="text-5xl font-bold text-emerald-400 mb-2">85kg</div>
+                            <p class="text-slate-400">Since joining EcoRefill</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Community -->
+                <div id="section-community" class="spa-section hidden">
+                    <div class="mb-8">
+                        <h1 class="text-4xl font-bold mb-2">Community</h1>
+                        <p class="text-slate-400">Connect with fellow eco-warriors</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-slate-800/50 border border-emerald-500/10 rounded-xl">
+                            <p class="font-bold mb-1">Upcoming Beach Cleanup</p>
+                            <p class="text-sm text-slate-400">Join us this Sunday at 7 AM</p>
+                        </div>
+                        <div class="p-4 bg-slate-800/50 border border-emerald-500/10 rounded-xl">
+                            <p class="font-bold mb-1">New Zero-Waste Recipes</p>
+                            <p class="text-sm text-slate-400">Check out the latest community cook-off</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -203,11 +319,11 @@
                 <div class="w-14 h-14 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i class="bi bi-box-arrow-left text-2xl text-emerald-400"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">Ready to Leave?</h3>
-                <p class="text-slate-400 mb-8">Are you sure you want to log out of your EcoRefill account?</p>
+                <h3 class="text-2xl font-bold mb-2">Do you want to logout?</h3>
+                <p class="text-slate-400 mb-8">You will be redirected to the homepage.</p>
                 <div class="grid grid-cols-2 gap-4">
-                    <button id="confirmLogout" class="px-6 py-3 bg-emerald-500 text-white font-bold rounded-xl hover:bg-emerald-600 transition-all">Yes, Logout</button>
-                    <button id="cancelLogout" class="px-6 py-3 bg-slate-800 text-white font-bold rounded-xl hover:bg-slate-700 transition-all">Not yet</button>
+                    <button id="confirmLogout" class="px-6 py-3 bg-emerald-500 text-white font-bold rounded-xl hover:bg-emerald-600 transition-all">Yes</button>
+                    <button id="cancelLogout" class="px-6 py-3 bg-slate-800 text-white font-bold rounded-xl hover:bg-slate-700 transition-all">Cancel</button>
                 </div>
             </div>
         </div>
