@@ -1,0 +1,401 @@
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - EcoRefill</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 transition-colors duration-300">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-emerald-500/20 transition-all duration-300">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center shrink-0">
+                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-24 w-auto max-w-none">
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium hover:text-emerald-400 transition">Home</a>
+                    <a href="home-2.html" class="text-sm font-medium hover:text-emerald-400 transition">Enterprise</a>
+                    <a href="shop.html" class="text-sm font-medium text-emerald-400">Shop</a>
+                    <a href="refill-station.html" class="text-sm font-medium hover:text-emerald-400 transition">Refill</a>
+                    <a href="membership.html" class="text-sm font-medium hover:text-emerald-400 transition">Membership</a>
+                    <a href="impact.html" class="text-sm font-medium hover:text-emerald-400 transition">Impact</a>
+                    <a href="community.html" class="text-sm font-medium hover:text-emerald-400 transition">Community</a>
+                    <a href="contact.html" class="text-sm font-medium hover:text-emerald-400 transition">Contact</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="themeToggle" class="p-2 hover:bg-emerald-500/10 rounded-lg transition">
+                        <i class="bi bi-moon-stars text-lg"></i>
+                    </button>
+                    <button id="rtlToggle" class="p-2 hover:bg-emerald-500/10 rounded-lg transition">
+                        <i class="bi bi-translate text-lg"></i>
+                    </button>
+                    <button class="relative p-2 hover:bg-emerald-500/10 rounded-lg transition">
+                        <i class="bi bi-bag text-lg"></i>
+                        <span class="absolute top-1 right-1 w-5 h-5 bg-emerald-500 text-white text-xs flex items-center justify-center rounded-full">0</span>
+                    </button>
+                    <div class="relative">
+                        <button id="profileDropdownBtn" class="hidden sm:flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-bold rounded-xl hover:shadow-lg hover:shadow-emerald-500/30 transition-all duration-300">
+                            <i class="bi bi-person-circle"></i>
+                            <span>Profile</span>
+                            <i class="bi bi-chevron-down text-xs"></i>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div id="profileDropdown" class="hidden absolute right-0 mt-2 w-48 bg-slate-900 border border-emerald-500/20 rounded-xl shadow-xl py-2 z-50">
+                            <a href="dashboard.html" class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-emerald-500/10 transition">
+                                <i class="bi bi-speedometer2"></i>
+                                Dashboard
+                            </a>
+                            <a href="login.html" class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-emerald-500/10 transition border-t border-emerald-500/10">
+                                <i class="bi bi-box-arrow-in-right"></i>
+                                Login
+                            </a>
+                        </div>
+                    </div>
+                    <button id="mobileMenuBtn" class="md:hidden p-2 hover:bg-emerald-500/10 rounded-lg transition">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4">
+                <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Home</a>
+                <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Enterprise</a>
+                <a href="shop.html" class="block px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-lg font-bold">Shop</a>
+                <a href="refill-station.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Refill</a>
+                <a href="membership.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Membership</a>
+                <a href="impact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Impact</a>
+                <a href="community.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Community</a>
+                <a href="contact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Contact</a>
+                <a href="dashboard.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-emerald-400 font-bold">Profile</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Page Title -->
+        <div class="mb-12">
+            <h1 class="text-5xl font-bold mb-4">Shop Zero-Waste</h1>
+            <p class="text-xl text-slate-300">Bring your containers. Fill what you need. Leave the plastic behind.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-8">
+            <!-- Sidebar Filters -->
+            <div class="lg:col-span-1">
+                <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-6 sticky top-24">
+                    <h3 class="font-bold text-lg mb-6">Filters</h3>
+
+                    <!-- Category Filter -->
+                    <div class="mb-8">
+                        <h4 class="font-semibold mb-4 text-sm">Category</h4>
+                        <div class="space-y-3">
+                            <label class="flex items-center gap-3 cursor-pointer hover:text-emerald-400 transition">
+                                <input type="checkbox" class="accent-emerald-500" checked>
+                                <span class="text-sm">All Products</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer hover:text-emerald-400 transition">
+                                <input type="checkbox" class="accent-emerald-500">
+                                <span class="text-sm">Grains & Cereals</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer hover:text-emerald-400 transition">
+                                <input type="checkbox" class="accent-emerald-500">
+                                <span class="text-sm">Spices</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer hover:text-emerald-400 transition">
+                                <input type="checkbox" class="accent-emerald-500">
+                                <span class="text-sm">Oils & Vinegars</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer hover:text-emerald-400 transition">
+                                <input type="checkbox" class="accent-emerald-500">
+                                <span class="text-sm">Cleaning Refills</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer hover:text-emerald-400 transition">
+                                <input type="checkbox" class="accent-emerald-500">
+                                <span class="text-sm">Personal Care</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="mb-8">
+                        <h4 class="font-semibold mb-4 text-sm">Price Range</h4>
+                        <input type="range" min="0" max="1000" class="w-full accent-emerald-500">
+                        <div class="flex justify-between text-sm text-slate-400 mt-2">
+                            <span>₹0</span>
+                            <span>₹1000</span>
+                        </div>
+                    </div>
+
+                    <!-- Sort -->
+                    <div>
+                        <h4 class="font-semibold mb-4 text-sm">Sort By</h4>
+                        <select class="w-full px-3 py-2 bg-slate-700/50 border border-emerald-500/20 rounded-lg text-white text-sm focus:outline-none focus:border-emerald-500">
+                            <option>Newest</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Best Sellers</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="lg:col-span-4">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Product Card 1 -->
+                    <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
+                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300 relative">
+                            🌾
+                            <span class="absolute top-3 right-3 px-3 py-1 bg-emerald-500 text-white text-xs font-bold rounded-full">20% Off</span>
+                        </div>
+                        <h3 class="font-bold mb-2 line-clamp-2">Organic Wheat Berries</h3>
+                        <p class="text-sm text-slate-400 mb-2">Premium organic, per kg</p>
+                        <div class="flex items-center gap-1 mb-4">
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-half text-yellow-400 text-sm"></i>
+                            <span class="text-xs text-slate-400 ml-2">(245 reviews)</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-emerald-400 font-bold">₹450</span>
+                                <span class="text-slate-500 line-through text-sm ml-2">₹560</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 px-4 py-2 bg-emerald-500/20 border border-emerald-500 text-emerald-400 font-bold rounded-lg hover:bg-emerald-500/30 transition text-sm">
+                                View
+                            </button>
+                            <button class="flex-1 px-4 py-2 bg-emerald-500 text-white font-bold rounded-lg hover:bg-emerald-600 transition text-sm flex items-center justify-center gap-2">
+                                <i class="bi bi-bag-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
+                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
+                            🌶️
+                        </div>
+                        <h3 class="font-bold mb-2 line-clamp-2">Turmeric Powder</h3>
+                        <p class="text-sm text-slate-400 mb-2">Pure, freshly ground</p>
+                        <div class="flex items-center gap-1 mb-4">
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star text-yellow-400 text-sm"></i>
+                            <span class="text-xs text-slate-400 ml-2">(156 reviews)</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-emerald-400 font-bold">₹280/kg</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 px-4 py-2 bg-emerald-500/20 border border-emerald-500 text-emerald-400 font-bold rounded-lg hover:bg-emerald-500/30 transition text-sm">
+                                View
+                            </button>
+                            <button class="flex-1 px-4 py-2 bg-emerald-500 text-white font-bold rounded-lg hover:bg-emerald-600 transition text-sm flex items-center justify-center gap-2">
+                                <i class="bi bi-bag-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
+                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
+                            🫒
+                        </div>
+                        <h3 class="font-bold mb-2 line-clamp-2">Cold-Pressed Oil</h3>
+                        <p class="text-sm text-slate-400 mb-2">Organic coconut oil</p>
+                        <div class="flex items-center gap-1 mb-4">
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <span class="text-xs text-slate-400 ml-2">(432 reviews)</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-emerald-400 font-bold">₹380/L</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 px-4 py-2 bg-emerald-500/20 border border-emerald-500 text-emerald-400 font-bold rounded-lg hover:bg-emerald-500/30 transition text-sm">
+                                View
+                            </button>
+                            <button class="flex-1 px-4 py-2 bg-emerald-500 text-white font-bold rounded-lg hover:bg-emerald-600 transition text-sm flex items-center justify-center gap-2">
+                                <i class="bi bi-bag-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
+                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
+                            🧼
+                        </div>
+                        <h3 class="font-bold mb-2 line-clamp-2">Eco Cleaner Refill</h3>
+                        <p class="text-sm text-slate-400 mb-2">Concentrated formula</p>
+                        <div class="flex items-center gap-1 mb-4">
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-half text-yellow-400 text-sm"></i>
+                            <span class="text-xs text-slate-400 ml-2">(89 reviews)</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-emerald-400 font-bold">₹150</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 px-4 py-2 bg-emerald-500/20 border border-emerald-500 text-emerald-400 font-bold rounded-lg hover:bg-emerald-500/30 transition text-sm">
+                                View
+                            </button>
+                            <button class="flex-1 px-4 py-2 bg-emerald-500 text-white font-bold rounded-lg hover:bg-emerald-600 transition text-sm flex items-center justify-center gap-2">
+                                <i class="bi bi-bag-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5 -->
+                    <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
+                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
+                            🌰
+                        </div>
+                        <h3 class="font-bold mb-2 line-clamp-2">Mixed Nuts</h3>
+                        <p class="text-sm text-slate-400 mb-2">Roasted & unsalted mix</p>
+                        <div class="flex items-center gap-1 mb-4">
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star text-yellow-400 text-sm"></i>
+                            <span class="text-xs text-slate-400 ml-2">(203 reviews)</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-emerald-400 font-bold">₹520/kg</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 px-4 py-2 bg-emerald-500/20 border border-emerald-500 text-emerald-400 font-bold rounded-lg hover:bg-emerald-500/30 transition text-sm">
+                                View
+                            </button>
+                            <button class="flex-1 px-4 py-2 bg-emerald-500 text-white font-bold rounded-lg hover:bg-emerald-600 transition text-sm flex items-center justify-center gap-2">
+                                <i class="bi bi-bag-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 6 -->
+                    <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
+                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
+                            🧴
+                        </div>
+                        <h3 class="font-bold mb-2 line-clamp-2">Shampoo Refill</h3>
+                        <p class="text-sm text-slate-400 mb-2">Eco-friendly formula</p>
+                        <div class="flex items-center gap-1 mb-4">
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+                            <i class="bi bi-star-half text-yellow-400 text-sm"></i>
+                            <span class="text-xs text-slate-400 ml-2">(178 reviews)</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-emerald-400 font-bold">₹220</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 px-4 py-2 bg-emerald-500/20 border border-emerald-500 text-emerald-400 font-bold rounded-lg hover:bg-emerald-500/30 transition text-sm">
+                                View
+                            </button>
+                            <button class="flex-1 px-4 py-2 bg-emerald-500 text-white font-bold rounded-lg hover:bg-emerald-600 transition text-sm flex items-center justify-center gap-2">
+                                <i class="bi bi-bag-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center items-center gap-2 mt-12">
+                    <button class="px-3 py-2 border border-emerald-500/20 rounded-lg hover:border-emerald-500 transition">←</button>
+                    <button class="px-4 py-2 bg-emerald-500 text-white rounded-lg font-bold">1</button>
+                    <button class="px-4 py-2 border border-emerald-500/20 rounded-lg hover:border-emerald-500 transition">2</button>
+                    <button class="px-4 py-2 border border-emerald-500/20 rounded-lg hover:border-emerald-500 transition">3</button>
+                    <button class="px-3 py-2 border border-emerald-500/20 rounded-lg hover:border-emerald-500 transition">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-emerald-500/20 mt-24">
+        <div class="max-w-6xl mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-4 shrink-0">
+                        <img src="assets/logo.png" alt="EcoRefill Logo" class="h-24 w-auto max-w-none">
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">Refill. Reuse. Reduce.</p>
+                    <p class="text-xs text-slate-500">Building a zero-waste future, one refill at a time.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-4">Shop</h3>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="shop.html" class="hover:text-emerald-400 transition">Bulk Grains</a></li>
+                        <li><a href="shop.html" class="hover:text-emerald-400 transition">Spices</a></li>
+                        <li><a href="shop.html" class="hover:text-emerald-400 transition">Oils & Vinegars</a></li>
+                        <li><a href="shop.html" class="hover:text-emerald-400 transition">Cleaning Refills</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-4">Community</h3>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="membership.html" class="hover:text-emerald-400 transition">Membership</a></li>
+                        <li><a href="community.html" class="hover:text-emerald-400 transition">Events</a></li>
+                        <li><a href="impact.html" class="hover:text-emerald-400 transition">Impact Tracker</a></li>
+                        <li><a href="about.html" class="hover:text-emerald-400 transition">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-emerald-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition">Returns</a></li>
+                        <li><a href="contact.html" class="hover:text-emerald-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-emerald-500/20 pt-8">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p class="text-sm text-slate-400">&copy; 2024 EcoRefill. All rights reserved.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

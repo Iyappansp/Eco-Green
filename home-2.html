@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Solutions - EcoRefill</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(16, 185, 129, 0.1);
+        }
+        html.light .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 transition-colors duration-300">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-emerald-500/20">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center shrink-0">
+                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-24 w-auto max-w-none">
+                </a>
+                
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium hover:text-emerald-400 transition">Home</a>
+                    <a href="home-2.html" class="text-sm font-medium text-emerald-400">Enterprise</a>
+                    <a href="shop.html" class="text-sm font-medium hover:text-emerald-400 transition">Shop</a>
+                    <a href="impact.html" class="text-sm font-medium hover:text-emerald-400 transition">Impact</a>
+                    <a href="about.html" class="text-sm font-medium hover:text-emerald-400 transition">About</a>
+                    <a href="contact.html" class="text-sm font-medium hover:text-emerald-400 transition">Contact</a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <button id="themeToggle" class="p-2 hover:bg-emerald-500/10 rounded-lg transition">
+                        <i class="bi bi-moon-stars text-lg"></i>
+                    </button>
+                    <button id="rtlToggle" class="p-2 hover:bg-emerald-500/10 rounded-lg transition">
+                        <i class="bi bi-translate text-lg"></i>
+                    </button>
+                    <div class="relative">
+                        <button id="profileDropdownBtn" class="hidden sm:flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-bold rounded-xl hover:shadow-lg hover:shadow-emerald-500/30 transition-all duration-300">
+                            <i class="bi bi-person-circle"></i>
+                            <span>Profile</span>
+                            <i class="bi bi-chevron-down text-xs"></i>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div id="profileDropdown" class="hidden absolute right-0 mt-2 w-48 bg-slate-900 border border-emerald-500/20 rounded-xl shadow-xl py-2 z-50">
+                            <a href="dashboard.html" class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-emerald-500/10 transition text-white">
+                                <i class="bi bi-speedometer2"></i>
+                                Dashboard
+                            </a>
+                            <a href="login.html" class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-emerald-500/10 transition border-t border-emerald-500/10 text-white">
+                                <i class="bi bi-box-arrow-in-right"></i>
+                                Login
+                            </a>
+                        </div>
+                    </div>
+                    <a href="login.html" class="hidden sm:block px-6 py-2 bg-emerald-500 text-white rounded-lg font-bold hover:bg-emerald-600 transition">Partner With Us</a>
+                    <button id="mobileMenuBtn" class="md:hidden p-2 hover:bg-emerald-500/10 rounded-lg transition">
+                        <i class="bi bi-list text-lg"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4">
+                <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg">Home</a>
+                <a href="home-2.html" class="block px-4 py-2 text-emerald-400 bg-emerald-500/10 rounded-lg">Enterprise</a>
+                <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg">Shop</a>
+                <a href="dashboard.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg text-emerald-400 font-bold">Profile</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-24 overflow-hidden">
+        <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[120px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-up">
+                    <span class="inline-block px-4 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-bold mb-6">Enterprise Sustainability</span>
+                    <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6">
+                        Scaling Zero-Waste for <span class="gradient-text">Modern Business</span>
+                    </h1>
+                    <p class="text-xl text-slate-400 mb-10 leading-relaxed">
+                        Join the circular economy revolution. We provide end-to-end zero-waste supply chain solutions for offices, hotels, and retail chains. Reduce your carbon footprint with our smart refill infrastructure.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="px-8 py-4 bg-emerald-500 text-white rounded-xl font-bold hover:shadow-lg hover:shadow-emerald-500/30 transition-all">Get Enterprise Quote</button>
+                        <button class="px-8 py-4 border border-emerald-500/30 rounded-xl font-bold hover:bg-emerald-500/10 transition-all flex items-center gap-2">
+                            View Case Studies <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="relative animate-fade-up" style="animation-delay: 0.2s">
+                    <div class="glass-card p-8 rounded-3xl border border-emerald-500/20 shadow-2xl relative z-10">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="p-6 bg-slate-900/50 rounded-2xl border border-emerald-500/10">
+                                <div class="text-4xl mb-4">🏢</div>
+                                <h3 class="font-bold mb-2">Office Pantry</h3>
+                                <p class="text-sm text-slate-400">Automated refill dispensers for beverages and snacks.</p>
+                            </div>
+                            <div class="p-6 bg-slate-900/50 rounded-2xl border border-emerald-500/10">
+                                <div class="text-4xl mb-4">🏨</div>
+                                <h3 class="font-bold mb-2">Hospitality</h3>
+                                <p class="text-sm text-slate-400">Bulk personal care refills for hotel chains.</p>
+                            </div>
+                            <div class="p-6 bg-slate-900/50 rounded-2xl border border-emerald-500/10">
+                                <div class="text-4xl mb-4">🏬</div>
+                                <h3 class="font-bold mb-2">Retail Nodes</h3>
+                                <p class="text-sm text-slate-400">Smart refill kiosks for local grocery partners.</p>
+                            </div>
+                            <div class="p-6 bg-slate-900/50 rounded-2xl border border-emerald-500/10">
+                                <div class="text-4xl mb-4">📦</div>
+                                <h3 class="font-bold mb-2">Eco-Logistics</h3>
+                                <p class="text-sm text-slate-400">Circular packaging and return logistics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-teal-500/20 rounded-full blur-2xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Content Section -->
+    <section class="py-24 bg-slate-900/30">
+        <div class="max-w-4xl mx-auto px-4 text-center mb-16">
+            <h2 class="text-4xl font-bold mb-6">Built for Impact, Designed for Efficiency</h2>
+            <p class="text-lg text-slate-400">Our enterprise platform provides the transparency and scalability required for modern ESG reporting and sustainable growth.</p>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
+            <div class="p-10 glass-card rounded-3xl animate-fade-up">
+                <i class="bi bi-shield-check text-4xl text-emerald-400 mb-6 block"></i>
+                <h3 class="text-2xl font-bold mb-4">Certified Compliance</h3>
+                <p class="text-slate-400 leading-relaxed mb-6">We ensure all refill processes meet international food safety and hygiene standards. Our automated systems track LOT numbers and expiry dates in real-time for complete traceability.</p>
+                <a href="#" class="text-emerald-400 font-bold hover:underline">Read Policy →</a>
+            </div>
+            
+            <div class="p-10 glass-card rounded-3xl animate-fade-up" style="animation-delay: 0.1s">
+                <i class="bi bi-cpu text-4xl text-emerald-400 mb-6 block"></i>
+                <h3 class="text-2xl font-bold mb-4">Smart Infrastructure</h3>
+                <p class="text-slate-400 leading-relaxed mb-6">IoT-enabled dispensers provide predictive maintenance and automatic restocking alerts. Your facility team receives instant notifications when supplies are low.</p>
+                <a href="#" class="text-emerald-400 font-bold hover:underline">Explore Tech →</a>
+            </div>
+
+            <div class="p-10 glass-card rounded-3xl animate-fade-up" style="animation-delay: 0.2s">
+                <i class="bi bi-graph-up-arrow text-4xl text-emerald-400 mb-6 block"></i>
+                <h3 class="text-2xl font-bold mb-4">ESG Analytics</h3>
+                <p class="text-slate-400 leading-relaxed mb-6">Generate ready-to-use sustainability reports for your investors. Track precise plastic savings, water reduction, and CO2 offset metrics across all office locations.</p>
+                <a href="#" class="text-emerald-400 font-bold hover:underline">View Dashboard →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Narrative Section -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1 animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Sustainable Office" class="rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+                <div class="order-1 lg:order-2 animate-fade-up" style="animation-delay: 0.2s">
+                    <h2 class="text-4xl font-bold mb-8">Why Circular Economy Matters</h2>
+                    <div class="space-y-6 text-slate-400 leading-loose">
+                        <p>In a world of finite resources, the traditional "take-make-waste" model is no longer viable. Businesses today face increasing pressure from consumers, regulators, and investors to transition toward circular models that eliminate waste at the source.</p>
+                        <p>At EcoRefill, we believe that sustainability should be a silent, efficient partner to your core business operations. Our Enterprise 2.0 platform isn't just about saving the planet—it's about operational excellence. By eliminating single-use packaging, we help you reduce waste management costs by up to 40% while enhancing your brand's reputation.</p>
+                        <p>Our comprehensive onboarding includes site assessments, infrastructure installation, and employee training programs designed to foster a culture of sustainability within your organization.</p>
+                    </div>
+                    <div class="mt-10 grid grid-cols-2 gap-8">
+                        <div>
+                            <div class="text-3xl font-bold text-emerald-400">40%</div>
+                            <div class="text-sm font-semibold uppercase tracking-wider">Cost Reduction</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-emerald-400">Zero</div>
+                            <div class="text-sm font-semibold uppercase tracking-wider">Plastic Waste</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24 px-4">
+        <div class="max-w-5xl mx-auto bg-gradient-to-br from-emerald-600 to-teal-700 rounded-[40px] p-12 lg:p-20 text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl lg:text-6xl font-bold text-white mb-8">Ready to transform your facility?</h2>
+                <p class="text-xl text-emerald-50 mb-12 max-w-2xl mx-auto">Customized zero-waste solutions for businesses of any scale. Speak with a sustainability consultant today.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="px-10 py-5 bg-white text-emerald-700 rounded-2xl font-bold text-lg hover:scale-105 transition-transform">Schedule Free Consultation</button>
+                    <button class="px-10 py-5 bg-emerald-800 text-white rounded-2xl font-bold text-lg hover:bg-emerald-900 transition-colors">Download Brochure</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-emerald-500/20 mt-24">
+        <div class="max-w-6xl mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-4 shrink-0">
+                        <img src="assets/logo.png" alt="EcoRefill Logo" class="h-24 w-auto max-w-none">
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">Refill. Reuse. Reduce.</p>
+                    <p class="text-xs text-slate-500">Building a zero-waste future, one refill at a time.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-4">Shop</h3>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="shop.html" class="hover:text-emerald-400 transition">Bulk Grains</a></li>
+                        <li><a href="shop.html" class="hover:text-emerald-400 transition">Spices</a></li>
+                        <li><a href="shop.html" class="hover:text-emerald-400 transition">Oils & Vinegars</a></li>
+                        <li><a href="shop.html" class="hover:text-emerald-400 transition">Cleaning Refills</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-4">Community</h3>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="membership.html" class="hover:text-emerald-400 transition">Membership</a></li>
+                        <li><a href="community.html" class="hover:text-emerald-400 transition">Events</a></li>
+                        <li><a href="impact.html" class="hover:text-emerald-400 transition">Impact Tracker</a></li>
+                        <li><a href="about.html" class="hover:text-emerald-400 transition">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-emerald-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition">Returns</a></li>
+                        <li><a href="contact.html" class="hover:text-emerald-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-emerald-500/20 pt-8">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p class="text-sm text-slate-400">&copy; 2024 EcoRefill. All rights reserved.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>

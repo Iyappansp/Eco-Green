@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refill Station - EcoRefill</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 transition-colors duration-300">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-emerald-500/20">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center shrink-0">
+                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-24 w-auto max-w-none">
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium hover:text-emerald-400 transition">Home</a>
+                    <a href="home-2.html" class="text-sm font-medium hover:text-emerald-400 transition">Enterprise</a>
+                    <a href="shop.html" class="text-sm font-medium hover:text-emerald-400 transition">Shop</a>
+                    <a href="refill-station.html" class="text-sm font-medium text-emerald-400">Refill</a>
+                    <a href="membership.html" class="text-sm font-medium hover:text-emerald-400 transition">Membership</a>
+                    <a href="impact.html" class="text-sm font-medium hover:text-emerald-400 transition">Impact</a>
+                    <a href="community.html" class="text-sm font-medium hover:text-emerald-400 transition">Community</a>
+                    <a href="contact.html" class="text-sm font-medium hover:text-emerald-400 transition">Contact</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="themeToggle" class="p-2 hover:bg-emerald-500/10 rounded-lg transition">
+                        <i class="bi bi-moon-stars text-lg"></i>
+                    </button>
+                    <button id="rtlToggle" class="p-2 hover:bg-emerald-500/10 rounded-lg transition">
+                        <i class="bi bi-translate text-lg"></i>
+                    </button>
+                    <div class="relative">
+                        <button id="profileDropdownBtn" class="hidden sm:flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-bold rounded-xl hover:shadow-lg hover:shadow-emerald-500/30 transition-all duration-300">
+                            <i class="bi bi-person-circle"></i>
+                            <span>Profile</span>
+                            <i class="bi bi-chevron-down text-xs"></i>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div id="profileDropdown" class="hidden absolute right-0 mt-2 w-48 bg-slate-900 border border-emerald-500/20 rounded-xl shadow-xl py-2 z-50">
+                            <a href="dashboard.html" class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-emerald-500/10 transition">
+                                <i class="bi bi-speedometer2"></i>
+                                Dashboard
+                            </a>
+                            <a href="login.html" class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-emerald-500/10 transition border-t border-emerald-500/10">
+                                <i class="bi bi-box-arrow-in-right"></i>
+                                Login
+                            </a>
+                        </div>
+                    </div>
+                    <button id="mobileMenuBtn" class="md:hidden p-2 hover:bg-emerald-500/10 rounded-lg transition">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4">
+                <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Home</a>
+                <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Enterprise</a>
+                <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Shop</a>
+                <a href="refill-station.html" class="block px-4 py-2 bg-emerald-500/10 text-emerald-400 font-bold rounded-lg">Refill</a>
+                <a href="membership.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Membership</a>
+                <a href="impact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Impact</a>
+                <a href="community.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Community</a>
+                <a href="contact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Contact</a>
+                <a href="dashboard.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-emerald-400 font-bold">Profile</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Page Title -->
+        <div class="mb-20 text-center">
+            <h1 class="text-5xl font-bold mb-4">Refill Station</h1>
+            <p class="text-xl text-slate-300">How to refill your containers and earn credits</p>
+        </div>
+
+        <!-- How to Refill -->
+        <div class="mb-20">
+            <h2 class="text-4xl font-bold mb-12">How to Refill</h2>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="relative p-8 bg-gradient-to-br from-emerald-900/20 to-transparent border border-emerald-500/30 rounded-2xl">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg">1</div>
+                    <div class="text-5xl mb-6 mt-4">🫙</div>
+                    <h3 class="text-xl font-bold mb-4">Bring Containers</h3>
+                    <p class="text-slate-300 text-sm">Bring your clean, food-grade containers. We accept jars, bottles, and bags of any size.</p>
+                </div>
+
+                <div class="relative p-8 bg-gradient-to-br from-emerald-900/20 to-transparent border border-emerald-500/30 rounded-2xl">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg">2</div>
+                    <div class="text-5xl mb-6 mt-4">⚖️</div>
+                    <h3 class="text-xl font-bold mb-4">Weigh In</h3>
+                    <p class="text-slate-300 text-sm">We weigh your empty containers. No charge for the weight of your reusable containers.</p>
+                </div>
+
+                <div class="relative p-8 bg-gradient-to-br from-emerald-900/20 to-transparent border border-emerald-500/30 rounded-2xl">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg">3</div>
+                    <div class="text-5xl mb-6 mt-4">🔄</div>
+                    <h3 class="text-xl font-bold mb-4">Fill & Pay</h3>
+                    <p class="text-slate-300 text-sm">Choose from 500+ products and fill your containers. Pay only for the product weight.</p>
+                </div>
+
+                <div class="relative p-8 bg-gradient-to-br from-emerald-900/20 to-transparent border border-emerald-500/30 rounded-2xl">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg">4</div>
+                    <div class="text-5xl mb-6 mt-4">🎁</div>
+                    <h3 class="text-xl font-bold mb-4">Earn Credits</h3>
+                    <p class="text-slate-300 text-sm">Every refill earns you credits & impact points. Track your sustainability journey.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Refill Credits -->
+        <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-12 mb-20">
+            <h2 class="text-4xl font-bold mb-8">Refill Credits System</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">How Credits Work</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle text-emerald-400 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Earn per refill</p>
+                                <p class="text-sm text-slate-400">1 credit per ₹50 spent on refills</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle text-emerald-400 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Bonus on milestones</p>
+                                <p class="text-sm text-slate-400">Extra credits for 10, 50, 100 refills</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle text-emerald-400 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Redeem anytime</p>
+                                <p class="text-sm text-slate-400">10 credits = ₹100 discount voucher</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle text-emerald-400 mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Never expire</p>
+                                <p class="text-sm text-slate-400">Credits stay valid as long as you're active</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Credit Tiers</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-emerald-500/20 border border-emerald-500 rounded-xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-bold">Bronze</span>
+                                <span class="text-sm">0-50 credits</span>
+                            </div>
+                            <p class="text-sm text-slate-400">5% bonus on all refills</p>
+                        </div>
+                        <div class="p-4 bg-emerald-500/20 border border-emerald-500 rounded-xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-bold">Silver</span>
+                                <span class="text-sm">50-150 credits</span>
+                            </div>
+                            <p class="text-sm text-slate-400">10% bonus + Priority pickup</p>
+                        </div>
+                        <div class="p-4 bg-emerald-500/20 border border-emerald-500 rounded-xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-bold">Gold</span>
+                                <span class="text-sm">150+ credits</span>
+                            </div>
+                            <p class="text-sm text-slate-400">15% bonus + Free delivery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book Pickup -->
+        <div class="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 border border-emerald-500 rounded-2xl p-12 mb-20">
+            <h2 class="text-4xl font-bold mb-8">Book Your Refill Slot</h2>
+            
+            <form class="grid md:grid-cols-2 gap-6 max-w-2xl" action="dashboard.html">
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Date</label>
+                    <input type="date" class="w-full px-4 py-3 bg-slate-700/50 border border-emerald-500/30 rounded-lg focus:outline-none focus:border-emerald-500 text-white">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Time Slot</label>
+                    <select class="w-full px-4 py-3 bg-slate-700/50 border border-emerald-500/30 rounded-lg focus:outline-none focus:border-emerald-500 text-white">
+                        <option>9:00 AM - 11:00 AM</option>
+                        <option>11:00 AM - 1:00 PM</option>
+                        <option>2:00 PM - 4:00 PM</option>
+                        <option>4:00 PM - 6:00 PM</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Location</label>
+                    <select class="w-full px-4 py-3 bg-slate-700/50 border border-emerald-500/30 rounded-lg focus:outline-none focus:border-emerald-500 text-white">
+                        <option>Marina Drive (Downtown)</option>
+                        <option>Bandra West</option>
+                        <option>Andheri East</option>
+                        <option>Dadar Circle</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Service Type</label>
+                    <select class="w-full px-4 py-3 bg-slate-700/50 border border-emerald-500/30 rounded-lg focus:outline-none focus:border-emerald-500 text-white">
+                        <option>In-Store Refill (Free)</option>
+                        <option>Home Pickup (₹50)</option>
+                        <option>Express Delivery (₹100)</option>
+                    </select>
+                </div>
+                <div class="md:col-span-2">
+                    <label class="block text-sm font-semibold mb-2">Special Instructions</label>
+                    <textarea class="w-full px-4 py-3 bg-slate-700/50 border border-emerald-500/30 rounded-lg focus:outline-none focus:border-emerald-500 text-white" rows="3" placeholder="Any special requests or notes..."></textarea>
+                </div>
+                <div class="md:col-span-2">
+                    <button type="submit" class="w-full py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-emerald-500/50 transition">
+                        Book Refill Slot
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- FAQ -->
+        <div>
+            <h2 class="text-3xl font-bold mb-8">Refill Questions</h2>
+            
+            <div class="space-y-4">
+                <div class="p-6 bg-slate-800/50 border border-emerald-500/20 rounded-xl">
+                    <div class="flex items-center justify-between cursor-pointer group">
+                        <h3 class="font-bold text-lg">What containers can I bring?</h3>
+                        <i class="bi bi-chevron-down group-hover:rotate-180 transition-transform"></i>
+                    </div>
+                    <p class="text-slate-400 mt-4 hidden group-hover:block">Any clean, food-grade containers like glass jars, stainless steel bottles, cloth bags, or plastic containers. We don't accept containers with odors or residue.</p>
+                </div>
+
+                <div class="p-6 bg-slate-800/50 border border-emerald-500/20 rounded-xl">
+                    <div class="flex items-center justify-between cursor-pointer group">
+                        <h3 class="font-bold text-lg">Do I need to register before refilling?</h3>
+                        <i class="bi bi-chevron-down group-hover:rotate-180 transition-transform"></i>
+                    </div>
+                    <p class="text-slate-400 mt-4 hidden group-hover:block">No, you can refill without membership. However, registered members get discounts and earn refill credits that can be redeemed.</p>
+                </div>
+
+                <div class="p-6 bg-slate-800/50 border border-emerald-500/20 rounded-xl">
+                    <div class="flex items-center justify-between cursor-pointer group">
+                        <h3 class="font-bold text-lg">What are the opening hours?</h3>
+                        <i class="bi bi-chevron-down group-hover:rotate-180 transition-transform"></i>
+                    </div>
+                    <p class="text-slate-400 mt-4 hidden group-hover:block">Monday-Sunday: 9:00 AM - 7:00 PM. We're closed on public holidays. Book a slot in advance for guaranteed service.</p>
+                </div>
+
+                <div class="p-6 bg-slate-800/50 border border-emerald-500/20 rounded-xl">
+                    <div class="flex items-center justify-between cursor-pointer group">
+                        <h3 class="font-bold text-lg">Can I order online and refill later?</h3>
+                        <i class="bi bi-chevron-down group-hover:rotate-180 transition-transform"></i>
+                    </div>
+                    <p class="text-slate-400 mt-4 hidden group-hover:block">Yes! Order online, choose a refill pickup slot, and collect your products at the scheduled time. We'll keep your order fresh for you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-emerald-500/20 mt-24">
+        <div class="max-w-6xl mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-4 shrink-0">
+                        <img src="assets/logo.png" alt="EcoRefill Logo" class="h-24 w-auto max-w-none">
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">Refill. Reuse. Reduce.</p>
+                    <p class="text-xs text-slate-500">Building a zero-waste future, one refill at a time.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-4">Shop</h3>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="shop.html" class="hover:text-emerald-400 transition">Bulk Grains</a></li>
+                        <li><a href="shop.html" class="hover:text-emerald-400 transition">Spices</a></li>
+                        <li><a href="shop.html" class="hover:text-emerald-400 transition">Oils & Vinegars</a></li>
+                        <li><a href="shop.html" class="hover:text-emerald-400 transition">Cleaning Refills</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-4">Community</h3>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="membership.html" class="hover:text-emerald-400 transition">Membership</a></li>
+                        <li><a href="community.html" class="hover:text-emerald-400 transition">Events</a></li>
+                        <li><a href="impact.html" class="hover:text-emerald-400 transition">Impact Tracker</a></li>
+                        <li><a href="about.html" class="hover:text-emerald-400 transition">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-emerald-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-emerald-400 transition">Returns</a></li>
+                        <li><a href="contact.html" class="hover:text-emerald-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-emerald-500/20 pt-8">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p class="text-sm text-slate-400">&copy; 2024 EcoRefill. All rights reserved.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+/* Global Style Overrides */
+
+/* Transitions for Theme Switch */
+* {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Light Mode Overrides */
+html.light body {
+    background-color: #f8fafc !important; /* slate-50 */
+    color: #0f172a !important; /* slate-900 */
+}
+
+html.light header,
+html.light .sticky {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border-color: rgba(16, 185, 129, 0.2) !important;
+}
+
+html.light .bg-slate-950,
+html.light .bg-slate-950\/80 {
+    background-color: #ffffff !important;
+    border-color: rgba(16, 185, 129, 0.1) !important;
+}
+
+html.light .bg-slate-900,
+html.light .bg-slate-900\/50 {
+    background-color: #f1f5f9 !important; /* slate-100 */
+}
+
+html.light .bg-slate-800,
+html.light .bg-slate-800\/50,
+html.light .bg-gradient-to-br[class*="from-slate-800"] {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    border-color: rgba(16, 185, 129, 0.2) !important;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05) !important;
+}
+
+html.light .text-slate-100,
+html.light .text-slate-200,
+html.light .text-white {
+    color: #0f172a !important; /* slate-900 */
+}
+
+html.light .text-slate-300,
+html.light .text-slate-400 {
+    color: #475569 !important; /* slate-600 */
+}
+
+html.light .border-emerald-500\/20,
+html.light .border-emerald-500\/30 {
+    border-color: rgba(16, 185, 129, 0.2) !important;
+}
+
+html.light .bg-emerald-500\/10,
+html.light .bg-emerald-500\/20 {
+    background-color: rgba(16, 185, 129, 0.05) !important;
+}
+
+html.light .bg-gradient-to-br.from-emerald-900\/20,
+html.light .bg-gradient-to-br.from-emerald-900\/30 {
+    background-color: rgba(16, 185, 129, 0.05) !important;
+    background-image: none !important;
+    border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+html.light .bg-slate-700\/30,
+html.light .bg-slate-700\/50 {
+    background-color: rgba(241, 245, 249, 1) !important;
+}
+
+/* Form inputs in light mode */
+html.light input,
+html.light select,
+html.light textarea {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .bi-chevron-right,
+[dir="rtl"] .bi-arrow-right {
+    transform: rotate(180deg);
+}
+
+[dir="rtl"] .ml-auto {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+[dir="rtl"] .mr-auto {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Flip gradients for RTL */
+[dir="rtl"] .bg-gradient-to-r {
+    background-image: linear-gradient(to left, var(--tw-gradient-stops)) !important;
+}
+
+[dir="rtl"] .bg-gradient-to-br {
+    background-image: linear-gradient(to bottom left, var(--tw-gradient-stops)) !important;
+}
+
+/* Fix sticky header position in RTL */
+[dir="rtl"] .sticky {
+    right: 0;
+    left: auto;
+}
+
+/* Ensure icons in buttons are correctly placed in RTL */
+[dir="rtl"] .flex.items-center.gap-2 > *:first-child,
+[dir="rtl"] .flex.items-center.gap-3 > *:first-child,
+[dir="rtl"] .flex.items-center.gap-4 > *:first-child {
+    order: 0;
+}
+
+/* Logout Modal Light Mode */
+html.light #logoutModal {
+    background-color: rgba(15, 23, 42, 0.4) !important;
+}
+
+html.light #logoutModalContent {
+    background-color: #ffffff !important;
+    border-color: rgba(16, 185, 129, 0.2) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+html.light #logoutModalContent h3 {
+    color: #0f172a !important;
+}
+
+html.light #logoutModalContent p {
+    color: #475569 !important;
+}
+
+html.light #cancelLogout {
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+}
+
+html.light #cancelLogout:hover {
+    background-color: #e2e8f0 !important;
+}
+
+/* Animations Helper */
+.reveal {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
