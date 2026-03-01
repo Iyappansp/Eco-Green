@@ -52,10 +52,14 @@
                 </a>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center gap-8">
+                <div class="hidden md:flex items-center gap-6">
                     <a href="index.html" class="text-sm font-medium hover:text-emerald-400 transition">Home</a>
                     <a href="home-2.html" class="text-sm font-medium hover:text-emerald-400 transition">Enterprise</a>
                     <a href="shop.html" class="text-sm font-medium hover:text-emerald-400 transition">Shop</a>
+                    <a href="refill-station.html" class="text-sm font-medium hover:text-emerald-400 transition">Refill</a>
+                    <a href="membership.html" class="text-sm font-medium hover:text-emerald-400 transition">Membership</a>
+                    <a href="impact.html" class="text-sm font-medium hover:text-emerald-400 transition">Impact</a>
+                    <a href="community.html" class="text-sm font-medium hover:text-emerald-400 transition">Community</a>
                     <a href="about.html" class="text-sm font-medium hover:text-emerald-400 transition">About</a>
                     <a href="contact.html" class="text-sm font-medium text-emerald-400">Contact</a>
                 </div>
@@ -94,20 +98,30 @@
 
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4 pb-4">
-                <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">Home</a>
-                <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">Enterprise</a>
-                <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">Shop</a>
+                <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Home</a>
+                <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Enterprise</a>
+                <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Shop</a>
+                <a href="refill-station.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Refill</a>
+                <a href="membership.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Membership</a>
+                <a href="impact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Impact</a>
+                <a href="community.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Community</a>
+                <a href="about.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">About</a>
+                <a href="contact.html" class="block px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-lg font-bold">Contact</a>
+                <hr class="border-emerald-500/20 my-2">
                 <a href="dashboard.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-emerald-400 font-bold">Profile</a>
-                <a href="about.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">About</a>
-                <a href="contact.html" class="block px-4 py-2 text-emerald-400 border-l-2 border-emerald-400 bg-emerald-500/5">Contact</a>
             </div>
         </nav>
     </header>
 
     <!-- Page Header (Contact Header) -->
     <section class="relative py-24 sm:py-32 overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-emerald-900/10 to-transparent"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/hero-bg.png" alt="Hero Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-950/85 backdrop-blur-[2px]"></div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-emerald-900/10 to-transparent z-1"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center z-1">
             <h1 class="text-5xl sm:text-7xl font-extrabold mb-8 animate-fade-in tracking-tight">
                 <span class="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Get in Touch</span>
             </h1>
@@ -116,7 +130,7 @@
             </p>
         </div>
     </section>
-
+<br>
     <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
         <div class="grid lg:grid-cols-2 gap-16 items-start">
             <!-- Left: Enquiry Form -->
@@ -270,7 +284,7 @@
 
             <div class="border-t border-emerald-500/20 pt-8">
                 <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p class="text-sm text-slate-400">&copy; 2024 EcoRefill. All rights reserved.</p>
+                    <p class="text-sm text-slate-400">&copy; 2026 EcoRefill. All rights reserved.</p>
                     <div class="flex gap-4">
                         <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
                             <i class="bi bi-facebook"></i>

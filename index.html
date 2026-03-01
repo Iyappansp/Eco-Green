@@ -15,7 +15,7 @@
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center shrink-0">
-                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-24 w-auto max-w-none">
+                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-14 w-auto max-w-none">
                 </a>
 
                 <!-- Desktop Navigation -->
@@ -68,14 +68,17 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4">
-                <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">Home</a>
-                <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">Shop</a>
-                <a href="refill-station.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">Refill Station</a>
-                <a href="membership.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">Membership</a>
-                <a href="impact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">Impact</a>
-                <a href="community.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">Community</a>
-                <a href="about.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">About</a>
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4 pb-4">
+                <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Home</a>
+                <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Enterprise</a>
+                <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Shop</a>
+                <a href="refill-station.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Refill</a>
+                <a href="membership.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Membership</a>
+                <a href="impact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Impact</a>
+                <a href="community.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Community</a>
+                <a href="about.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">About</a>
+                <a href="contact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Contact</a>
+                <hr class="border-emerald-500/20 my-2">
                 <a href="dashboard.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-emerald-400 font-bold">Profile</a>
             </div>
         </nav>
@@ -83,9 +86,15 @@
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20 animate-pulse"></div>
-        <div class="absolute top-20 left-10 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl"></div>
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/hero-bg.png" alt="Hero Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-[2px]"></div>
+        </div>
+
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20 animate-pulse z-1"></div>
+        <div class="absolute top-20 left-10 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl z-1"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl z-1"></div>
 
         <div class="relative max-w-4xl mx-auto px-4 text-center">
             <h1 class="text-5xl sm:text-7xl font-bold mb-6 leading-tight animate-fade-up">
@@ -158,8 +167,8 @@
             
             <div class="grid md:grid-cols-4 gap-6">
                 <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
-                    <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
-                        🌾
+                    <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+                        <img src="assets/images/Wheat-Berries.png" alt="Organic Wheat Berries" class="w-full h-full object-cover">
                     </div>
                     <h3 class="font-bold mb-2">Organic Wheat Berries</h3>
                     <p class="text-sm text-slate-400 mb-4">Premium organic, per kg</p>
@@ -172,8 +181,8 @@
                 </div>
 
                 <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
-                    <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
-                        🌶️
+                    <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+                        <img src="assets/images/Turmeric-Powder.png" alt="Turmeric Powder" class="w-full h-full object-cover">
                     </div>
                     <h3 class="font-bold mb-2">Turmeric Powder</h3>
                     <p class="text-sm text-slate-400 mb-4">Pure, freshly ground</p>
@@ -186,8 +195,8 @@
                 </div>
 
                 <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
-                    <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
-                        🫒
+                    <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+                        <img src="assets/images/Cold-Pressed-Oil.png" alt="Cold-Pressed Oil" class="w-full h-full object-cover">
                     </div>
                     <h3 class="font-bold mb-2">Cold-Pressed Oil</h3>
                     <p class="text-sm text-slate-400 mb-4">Organic coconut oil</p>
@@ -200,8 +209,8 @@
                 </div>
 
                 <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
-                    <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
-                        🧼
+                    <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+                        <img src="assets/images/Eco-Cleaner-Refill.png" alt="Eco Cleaner" class="w-full h-full object-cover">
                     </div>
                     <h3 class="font-bold mb-2">Eco Cleaner</h3>
                     <p class="text-sm text-slate-400 mb-4">Concentrated refill bottle</p>
@@ -401,7 +410,7 @@
 
             <div class="border-t border-emerald-500/20 pt-8">
                 <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p class="text-sm text-slate-400">&copy; 2024 EcoRefill. All rights reserved.</p>
+                    <p class="text-sm text-slate-400">&copy; 2026 EcoRefill. All rights reserved.</p>
                     <div class="flex gap-4">
                         <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
                             <i class="bi bi-facebook"></i>

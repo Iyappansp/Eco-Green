@@ -14,9 +14,9 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center shrink-0">
-                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-24 w-auto max-w-none">
+                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-14 w-auto max-w-none">
                 </a>
-                <div class="hidden md:flex items-center gap-8">
+                <div class="hidden md:flex items-center gap-6">
                     <a href="index.html" class="text-sm font-medium hover:text-emerald-400 transition">Home</a>
                     <a href="home-2.html" class="text-sm font-medium hover:text-emerald-400 transition">Enterprise</a>
                     <a href="shop.html" class="text-sm font-medium hover:text-emerald-400 transition">Shop</a>
@@ -24,6 +24,7 @@
                     <a href="membership.html" class="text-sm font-medium hover:text-emerald-400 transition">Membership</a>
                     <a href="impact.html" class="text-sm font-medium hover:text-emerald-400 transition">Impact</a>
                     <a href="community.html" class="text-sm font-medium hover:text-emerald-400 transition">Community</a>
+                    <a href="about.html" class="text-sm font-medium hover:text-emerald-400 transition">About</a>
                     <a href="contact.html" class="text-sm font-medium hover:text-emerald-400 transition">Contact</a>
                 </div>
                 <div class="flex items-center gap-4">
@@ -58,7 +59,7 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4">
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4 pb-4">
                 <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Home</a>
                 <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Enterprise</a>
                 <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Shop</a>
@@ -66,18 +67,27 @@
                 <a href="membership.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Membership</a>
                 <a href="impact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Impact</a>
                 <a href="community.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Community</a>
+                <a href="about.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">About</a>
                 <a href="contact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Contact</a>
+                <hr class="border-emerald-500/20 my-2">
                 <a href="dashboard.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-emerald-400 font-bold">Profile</a>
             </div>
         </nav>
     </header>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <!-- Page Title -->
-        <div class="mb-20 text-center">
-            <h1 class="text-5xl font-bold mb-4">Refill Station</h1>
-            <p class="text-xl text-slate-300">How to refill your containers and earn credits</p>
+    <section class="relative py-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/hero-bg.png" alt="Hero Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-[2px]"></div>
         </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-1">
+            <!-- Page Title -->
+            <div class="mb-20 text-center">
+                <h1 class="text-5xl font-bold mb-4">Refill Station</h1>
+                <p class="text-xl text-slate-300">How to refill your containers and earn credits</p>
+            </div>
+        </div>
+    </section>
 
         <!-- How to Refill -->
         <div class="mb-20">
@@ -183,50 +193,64 @@
         </div>
 
         <!-- Book Pickup -->
-        <div class="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 border border-emerald-500 rounded-2xl p-12 mb-20">
-            <h2 class="text-4xl font-bold mb-8">Book Your Refill Slot</h2>
-            
-            <form class="grid md:grid-cols-2 gap-6 max-w-2xl" action="dashboard.html">
-                <div>
-                    <label class="block text-sm font-semibold mb-2">Date</label>
-                    <input type="date" class="w-full px-4 py-3 bg-slate-700/50 border border-emerald-500/30 rounded-lg focus:outline-none focus:border-emerald-500 text-white">
+        <div class="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 border border-emerald-500 rounded-[2.5rem] p-6 lg:p-10 mb-20 overflow-hidden relative">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">Book Your Refill Slot</h2>
+                    
+                    <form class="grid md:grid-cols-2 gap-4 lg:gap-6" action="dashboard.html">
+                        <div>
+                            <label class="block text-xs font-semibold mb-2 uppercase tracking-wider text-emerald-500/80">Date</label>
+                            <input type="date" class="w-full px-4 py-2.5 bg-slate-800/50 border border-emerald-500/20 rounded-xl focus:outline-none focus:border-emerald-500 text-white text-sm transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold mb-2 uppercase tracking-wider text-emerald-500/80">Time Slot</label>
+                            <select class="w-full px-4 py-2.5 bg-slate-800/50 border border-emerald-500/20 rounded-xl focus:outline-none focus:border-emerald-500 text-white text-sm transition-colors">
+                                <option>9:00 AM - 11:00 AM</option>
+                                <option>11:00 AM - 1:00 PM</option>
+                                <option>2:00 PM - 4:00 PM</option>
+                                <option>4:00 PM - 6:00 PM</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold mb-2 uppercase tracking-wider text-emerald-500/80">Location</label>
+                            <select class="w-full px-4 py-2.5 bg-slate-800/50 border border-emerald-500/20 rounded-xl focus:outline-none focus:border-emerald-500 text-white text-sm transition-colors">
+                                <option>Marina Drive (Downtown)</option>
+                                <option>Bandra West</option>
+                                <option>Andheri East</option>
+                                <option>Dadar Circle</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold mb-2 uppercase tracking-wider text-emerald-500/80">Service Type</label>
+                            <select class="w-full px-4 py-2.5 bg-slate-800/50 border border-emerald-500/20 rounded-xl focus:outline-none focus:border-emerald-500 text-white text-sm transition-colors">
+                                <option>In-Store Refill (Free)</option>
+                                <option>Home Pickup (₹50)</option>
+                                <option>Express Delivery (₹100)</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-xs font-semibold mb-2 uppercase tracking-wider text-emerald-500/80">Special Instructions</label>
+                            <textarea class="w-full px-4 py-2.5 bg-slate-800/50 border border-emerald-500/20 rounded-xl focus:outline-none focus:border-emerald-500 text-white text-sm transition-colors" rows="2" placeholder="Any special requests or notes..."></textarea>
+                        </div>
+                        <div class="md:col-span-2">
+                            <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-emerald-500/40 transition-all duration-300 transform active:scale-[0.98]">
+                                Book Refill Slot
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2">Time Slot</label>
-                    <select class="w-full px-4 py-3 bg-slate-700/50 border border-emerald-500/30 rounded-lg focus:outline-none focus:border-emerald-500 text-white">
-                        <option>9:00 AM - 11:00 AM</option>
-                        <option>11:00 AM - 1:00 PM</option>
-                        <option>2:00 PM - 4:00 PM</option>
-                        <option>4:00 PM - 6:00 PM</option>
-                    </select>
+                
+                <div class="order-1 lg:order-2 relative group h-64 lg:h-[420px]">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-[2rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative h-full overflow-hidden rounded-[2rem] border border-emerald-500/20 shadow-2xl">
+                        <img src="assets/image.png" alt="Sustainability illustration" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent flex items-end p-6">
+                            <p class="text-white text-sm font-medium italic drop-shadow-lg">"Small changes lead to a massive impact."</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2">Location</label>
-                    <select class="w-full px-4 py-3 bg-slate-700/50 border border-emerald-500/30 rounded-lg focus:outline-none focus:border-emerald-500 text-white">
-                        <option>Marina Drive (Downtown)</option>
-                        <option>Bandra West</option>
-                        <option>Andheri East</option>
-                        <option>Dadar Circle</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2">Service Type</label>
-                    <select class="w-full px-4 py-3 bg-slate-700/50 border border-emerald-500/30 rounded-lg focus:outline-none focus:border-emerald-500 text-white">
-                        <option>In-Store Refill (Free)</option>
-                        <option>Home Pickup (₹50)</option>
-                        <option>Express Delivery (₹100)</option>
-                    </select>
-                </div>
-                <div class="md:col-span-2">
-                    <label class="block text-sm font-semibold mb-2">Special Instructions</label>
-                    <textarea class="w-full px-4 py-3 bg-slate-700/50 border border-emerald-500/30 rounded-lg focus:outline-none focus:border-emerald-500 text-white" rows="3" placeholder="Any special requests or notes..."></textarea>
-                </div>
-                <div class="md:col-span-2">
-                    <button type="submit" class="w-full py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-emerald-500/50 transition">
-                        Book Refill Slot
-                    </button>
-                </div>
-            </form>
+            </div>
         </div>
 
         <!-- FAQ -->
@@ -314,7 +338,7 @@
 
             <div class="border-t border-emerald-500/20 pt-8">
                 <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p class="text-sm text-slate-400">&copy; 2024 EcoRefill. All rights reserved.</p>
+                    <p class="text-sm text-slate-400">&copy; 2026 EcoRefill. All rights reserved.</p>
                     <div class="flex gap-4">
                         <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
                             <i class="bi bi-facebook"></i>

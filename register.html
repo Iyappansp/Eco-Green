@@ -16,10 +16,14 @@
                 <a href="index.html" class="flex items-center shrink-0">
                     <img src="assets/logo.png" alt="EcoRefill Logo" class="h-24 w-auto max-w-none">
                 </a>
-                <div class="hidden md:flex items-center gap-8">
+                <div class="hidden md:flex items-center gap-6">
                     <a href="index.html" class="text-sm font-medium hover:text-emerald-400 transition">Home</a>
                     <a href="home-2.html" class="text-sm font-medium hover:text-emerald-400 transition">Enterprise</a>
                     <a href="shop.html" class="text-sm font-medium hover:text-emerald-400 transition">Shop</a>
+                    <a href="refill-station.html" class="text-sm font-medium hover:text-emerald-400 transition">Refill</a>
+                    <a href="membership.html" class="text-sm font-medium hover:text-emerald-400 transition">Membership</a>
+                    <a href="impact.html" class="text-sm font-medium hover:text-emerald-400 transition">Impact</a>
+                    <a href="community.html" class="text-sm font-medium hover:text-emerald-400 transition">Community</a>
                     <a href="about.html" class="text-sm font-medium hover:text-emerald-400 transition">About</a>
                     <a href="contact.html" class="text-sm font-medium hover:text-emerald-400 transition">Contact</a>
                 </div>
@@ -55,19 +59,29 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4">
-                <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">Home</a>
-                <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">Enterprise</a>
-                <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">Shop</a>
-                <a href="about.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">About</a>
-                <a href="contact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition">Contact</a>
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4 pb-4">
+                <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Home</a>
+                <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Enterprise</a>
+                <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Shop</a>
+                <a href="refill-station.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Refill</a>
+                <a href="membership.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Membership</a>
+                <a href="impact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Impact</a>
+                <a href="community.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Community</a>
+                <a href="about.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">About</a>
+                <a href="contact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Contact</a>
+                <hr class="border-emerald-500/20 my-2">
                 <a href="dashboard.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-emerald-400 font-bold">Profile</a>
             </div>
         </nav>
     </header>
 
-    <div class="min-h-screen flex items-center justify-center px-4 py-16">
-        <div class="w-full max-w-md">
+    <div class="relative min-h-screen flex items-center justify-center px-4 py-16 overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/hero-bg.png" alt="Hero Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-[4px]"></div>
+        </div>
+        <div class="w-full max-w-md relative z-10">
             <!-- Register Card -->
             <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-8 backdrop-blur">
                 <div class="text-center mb-8">

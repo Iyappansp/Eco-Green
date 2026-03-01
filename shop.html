@@ -14,9 +14,9 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center shrink-0">
-                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-24 w-auto max-w-none">
+                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-14 w-auto max-w-none">
                 </a>
-                <div class="hidden md:flex items-center gap-8">
+                <div class="hidden md:flex items-center gap-6">
                     <a href="index.html" class="text-sm font-medium hover:text-emerald-400 transition">Home</a>
                     <a href="home-2.html" class="text-sm font-medium hover:text-emerald-400 transition">Enterprise</a>
                     <a href="shop.html" class="text-sm font-medium text-emerald-400">Shop</a>
@@ -24,6 +24,7 @@
                     <a href="membership.html" class="text-sm font-medium hover:text-emerald-400 transition">Membership</a>
                     <a href="impact.html" class="text-sm font-medium hover:text-emerald-400 transition">Impact</a>
                     <a href="community.html" class="text-sm font-medium hover:text-emerald-400 transition">Community</a>
+                    <a href="about.html" class="text-sm font-medium hover:text-emerald-400 transition">About</a>
                     <a href="contact.html" class="text-sm font-medium hover:text-emerald-400 transition">Contact</a>
                 </div>
                 <div class="flex items-center gap-4">
@@ -62,7 +63,7 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4">
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4 pb-4">
                 <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Home</a>
                 <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Enterprise</a>
                 <a href="shop.html" class="block px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-lg font-bold">Shop</a>
@@ -70,18 +71,27 @@
                 <a href="membership.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Membership</a>
                 <a href="impact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Impact</a>
                 <a href="community.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Community</a>
+                <a href="about.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">About</a>
                 <a href="contact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Contact</a>
+                <hr class="border-emerald-500/20 my-2">
                 <a href="dashboard.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-emerald-400 font-bold">Profile</a>
             </div>
         </nav>
     </header>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <!-- Page Title -->
-        <div class="mb-12">
-            <h1 class="text-5xl font-bold mb-4">Shop Zero-Waste</h1>
-            <p class="text-xl text-slate-300">Bring your containers. Fill what you need. Leave the plastic behind.</p>
+    <section class="relative py-12 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/hero-bg.png" alt="Hero Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-[2px]"></div>
         </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-1">
+            <!-- Page Title -->
+            <div class="mb-12">
+                <h1 class="text-5xl font-bold mb-4 text-white">Shop Zero-Waste</h1>
+                <p class="text-xl text-slate-300">Bring your containers. Fill what you need. Leave the plastic behind.</p>
+            </div>
+        </div>
+    </section>
 
         <div class="grid lg:grid-cols-5 gap-8">
             <!-- Sidebar Filters -->
@@ -148,8 +158,8 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Product Card 1 -->
                     <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
-                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300 relative">
-                            🌾
+                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+                            <img src="assets/images/Wheat-Berries.png" alt="Organic Wheat Berries" class="w-full h-full object-cover">
                             <span class="absolute top-3 right-3 px-3 py-1 bg-emerald-500 text-white text-xs font-bold rounded-full">20% Off</span>
                         </div>
                         <h3 class="font-bold mb-2 line-clamp-2">Organic Wheat Berries</h3>
@@ -180,8 +190,8 @@
 
                     <!-- Product Card 2 -->
                     <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
-                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
-                            🌶️
+                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+                            <img src="assets/images/Turmeric-Powder.png" alt="Turmeric Powder" class="w-full h-full object-cover">
                         </div>
                         <h3 class="font-bold mb-2 line-clamp-2">Turmeric Powder</h3>
                         <p class="text-sm text-slate-400 mb-2">Pure, freshly ground</p>
@@ -208,8 +218,8 @@
 
                     <!-- Product Card 3 -->
                     <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
-                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
-                            🫒
+                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+                            <img src="assets/images/Cold-Pressed-Oil.png" alt="Cold-Pressed Oil" class="w-full h-full object-cover">
                         </div>
                         <h3 class="font-bold mb-2 line-clamp-2">Cold-Pressed Oil</h3>
                         <p class="text-sm text-slate-400 mb-2">Organic coconut oil</p>
@@ -236,8 +246,8 @@
 
                     <!-- Product Card 4 -->
                     <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
-                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
-                            🧼
+                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+                            <img src="assets/images/Eco-Cleaner-Refill.png" alt="Eco Cleaner Refill" class="w-full h-full object-cover">
                         </div>
                         <h3 class="font-bold mb-2 line-clamp-2">Eco Cleaner Refill</h3>
                         <p class="text-sm text-slate-400 mb-2">Concentrated formula</p>
@@ -264,8 +274,8 @@
 
                     <!-- Product Card 5 -->
                     <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
-                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
-                            🌰
+                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+                            <img src="assets/images/Mixed%20Nuts.png" alt="Mixed Nuts" class="w-full h-full object-cover">
                         </div>
                         <h3 class="font-bold mb-2 line-clamp-2">Mixed Nuts</h3>
                         <p class="text-sm text-slate-400 mb-2">Roasted & unsalted mix</p>
@@ -292,8 +302,8 @@
 
                     <!-- Product Card 6 -->
                     <div class="group p-6 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10">
-                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
-                            🧴
+                        <div class="w-full h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+                            <img src="assets/images/Shampoo%20Refill.png" alt="Shampoo Refill" class="w-full h-full object-cover">
                         </div>
                         <h3 class="font-bold mb-2 line-clamp-2">Shampoo Refill</h3>
                         <p class="text-sm text-slate-400 mb-2">Eco-friendly formula</p>
@@ -376,7 +386,7 @@
 
             <div class="border-t border-emerald-500/20 pt-8">
                 <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p class="text-sm text-slate-400">&copy; 2024 EcoRefill. All rights reserved.</p>
+                    <p class="text-sm text-slate-400">&copy; 2026 EcoRefill. All rights reserved.</p>
                     <div class="flex gap-4">
                         <a href="#" class="text-slate-400 hover:text-emerald-400 transition">
                             <i class="bi bi-facebook"></i>
@@ -397,5 +407,6 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 </html>

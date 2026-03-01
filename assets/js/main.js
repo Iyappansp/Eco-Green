@@ -69,19 +69,21 @@ const confirmLogout = document.getElementById('confirmLogout');
 const cancelLogout = document.getElementById('cancelLogout');
 
 if (logoutBtn && logoutModal) {
-  logoutBtn.addEventListener('click', (e) => {
+  const showModal = (e) => {
     e.preventDefault();
     logoutModal.classList.remove('hidden');
     logoutModal.classList.add('flex');
     setTimeout(() => {
-        document.getElementById('logoutModalContent').classList.remove('scale-95');
-        document.getElementById('logoutModalContent').classList.add('scale-100');
+        document.getElementById('logoutModalContent').classList.remove('scale-95', 'opacity-0');
+        document.getElementById('logoutModalContent').classList.add('scale-100', 'opacity-100');
     }, 10);
-  });
+  };
+
+  logoutBtn.addEventListener('click', showModal);
 
   const closeModal = () => {
-    document.getElementById('logoutModalContent').classList.remove('scale-100');
-    document.getElementById('logoutModalContent').classList.add('scale-95');
+    document.getElementById('logoutModalContent').classList.remove('scale-100', 'opacity-100');
+    document.getElementById('logoutModalContent').classList.add('scale-95', 'opacity-0');
     setTimeout(() => {
         logoutModal.classList.remove('flex');
         logoutModal.classList.add('hidden');
@@ -91,14 +93,12 @@ if (logoutBtn && logoutModal) {
   cancelLogout.addEventListener('click', closeModal);
   
   confirmLogout.addEventListener('click', () => {
-    // Show a small loader or just redirect
     confirmLogout.innerHTML = '<i class="bi bi-hourglass-split animate-spin"></i> Logging out...';
     setTimeout(() => {
         window.location.href = 'index.html';
     }, 1000);
   });
 
-  // Close on backdrop click
   logoutModal.addEventListener('click', (e) => {
     if (e.target === logoutModal) closeModal();
   });

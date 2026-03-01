@@ -14,8 +14,22 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center shrink-0">
-                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-24 w-auto max-w-none">
+                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-14 w-auto max-w-none">
                 </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="index.html" class="text-sm font-medium hover:text-emerald-400 transition">Home</a>
+                    <a href="home-2.html" class="text-sm font-medium hover:text-emerald-400 transition">Enterprise</a>
+                    <a href="shop.html" class="text-sm font-medium hover:text-emerald-400 transition">Shop</a>
+                    <a href="refill-station.html" class="text-sm font-medium hover:text-emerald-400 transition">Refill</a>
+                    <a href="membership.html" class="text-sm font-medium hover:text-emerald-400 transition">Membership</a>
+                    <a href="impact.html" class="text-sm font-medium hover:text-emerald-400 transition">Impact</a>
+                    <a href="community.html" class="text-sm font-medium hover:text-emerald-400 transition">Community</a>
+                    <a href="about.html" class="text-sm font-medium hover:text-emerald-400 transition">About</a>
+                    <a href="contact.html" class="text-sm font-medium hover:text-emerald-400 transition">Contact</a>
+                </div>
+
                 <div class="flex items-center gap-4">
                     <button id="themeToggle" class="p-2 hover:bg-emerald-500/10 rounded-lg transition">
                         <i class="bi bi-moon-stars text-lg"></i>
@@ -45,7 +59,25 @@
                             </a>
                         </div>
                     </div>
+                    <button id="mobileMenuBtn" class="md:hidden p-2 hover:bg-emerald-500/10 rounded-lg transition">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
                 </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4 pb-4">
+                <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Home</a>
+                <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Enterprise</a>
+                <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Shop</a>
+                <a href="refill-station.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Refill</a>
+                <a href="membership.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Membership</a>
+                <a href="impact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Impact</a>
+                <a href="community.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Community</a>
+                <a href="about.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">About</a>
+                <a href="contact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Contact</a>
+                <hr class="border-emerald-500/20 my-2">
+                <a href="dashboard.html" class="block px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-lg font-bold">Profile</a>
             </div>
         </nav>
     </header>
@@ -128,7 +160,7 @@
                         <div class="text-2xl">🌱</div>
                     </div>
                     <div class="text-3xl font-bold text-emerald-400 mb-2">Eco Pro</div>
-                    <p class="text-sm text-slate-400">Renews on May 15, 2024</p>
+                    <p class="text-sm text-slate-400">Renews on May 15, 2026</p>
                 </div>
             </div>
 
@@ -142,7 +174,7 @@
                             <div class="text-3xl">🌾</div>
                             <div>
                                 <p class="font-semibold">Organic Wheat Berries</p>
-                                <p class="text-sm text-slate-400">Refilled on March 28, 2024</p>
+                                <p class="text-sm text-slate-400">Refilled on March 28, 2026</p>
                             </div>
                         </div>
                         <div class="text-right">
@@ -156,7 +188,7 @@
                             <div class="text-3xl">🧼</div>
                             <div>
                                 <p class="font-semibold">Eco Cleaner Refill</p>
-                                <p class="text-sm text-slate-400">Refilled on March 25, 2024</p>
+                                <p class="text-sm text-slate-400">Refilled on March 25, 2026</p>
                             </div>
                         </div>
                         <div class="text-right">
@@ -170,7 +202,7 @@
                             <div class="text-3xl">🌶️</div>
                             <div>
                                 <p class="font-semibold">Turmeric Powder</p>
-                                <p class="text-sm text-slate-400">Refilled on March 20, 2024</p>
+                                <p class="text-sm text-slate-400">Refilled on March 20, 2026</p>
                             </div>
                         </div>
                         <div class="text-right">
@@ -213,13 +245,13 @@
 
     <!-- Logout Confirmation Modal -->
     <div id="logoutModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm">
-        <div class="bg-slate-900 border border-emerald-500/30 rounded-3xl p-8 max-w-sm w-full shadow-2xl transform scale-95 transition-all duration-300" id="logoutModalContent">
+        <div class="bg-slate-900 border border-emerald-500/30 rounded-3xl p-8 max-w-sm w-full shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="logoutModalContent">
             <div class="text-center">
-                <div class="w-20 h-20 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="bi bi-box-arrow-left text-4xl text-emerald-400"></i>
+                <div class="w-14 h-14 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="bi bi-box-arrow-left text-2xl text-emerald-400"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-2">Ready to Leave?</h3>
-                <p class="text-slate-400 mb-8">Are you sure you want to log out of your EcoRefill dashboard?</p>
+                <p class="text-slate-400 mb-8">Are you sure you want to log out of your EcoRefill account?</p>
                 <div class="grid grid-cols-2 gap-4">
                     <button id="confirmLogout" class="px-6 py-3 bg-emerald-500 text-white font-bold rounded-xl hover:bg-emerald-600 transition-all">Yes, Logout</button>
                     <button id="cancelLogout" class="px-6 py-3 bg-slate-800 text-white font-bold rounded-xl hover:bg-slate-700 transition-all">Not yet</button>
