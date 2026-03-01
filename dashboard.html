@@ -9,82 +9,32 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-slate-950 text-slate-100 transition-colors duration-300">
-    <!-- Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-emerald-500/20">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="flex items-center justify-between">
-                <a href="index.html" class="flex items-center shrink-0">
-                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-14 w-auto max-w-none">
+    <!-- Background Image with Overlay -->
+    <div class="fixed inset-0 z-0">
+        <img src="assets/home2.png" alt="Dashboard Background" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-[2px]"></div>
+    </div>
+
+    <!-- Main Dashboard Layout -->
+    <div class="relative z-10 min-h-screen">
+        <!-- Mobile Toggle Header -->
+        <div class="lg:hidden sticky top-0 z-[60] flex items-center justify-between p-4 bg-slate-900/60 backdrop-blur-xl border-b border-emerald-500/20">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="assets/logo.png" alt="Logo" class="h-8 w-auto">
+            </a>
+            <button id="dashboardMobileMenuBtn" class="p-2 hover:bg-emerald-500/10 rounded-lg transition text-emerald-400">
+                <i class="bi bi-grid-fill text-2xl"></i>
+            </button>
+        </div>
+
+        <div class="grid lg:grid-cols-5 min-h-screen gap-4">
+            <!-- Sidebar -->
+            <div id="dashboardSidebar" class="hidden lg:block lg:col-span-1 bg-slate-900/40 backdrop-blur-md border-r border-emerald-500/20 p-6 fixed lg:relative inset-y-0 left-0 w-64 lg:w-auto z-50 transition-all duration-300">
+            <div class="mb-10 px-4">
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-12 w-auto">
                 </a>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center gap-6">
-                    <a href="index.html" class="text-sm font-medium hover:text-emerald-400 transition">Home</a>
-                    <a href="home-2.html" class="text-sm font-medium hover:text-emerald-400 transition">Enterprise</a>
-                    <a href="shop.html" class="text-sm font-medium hover:text-emerald-400 transition">Shop</a>
-                    <a href="refill-station.html" class="text-sm font-medium hover:text-emerald-400 transition">Refill</a>
-                    <a href="membership.html" class="text-sm font-medium hover:text-emerald-400 transition">Membership</a>
-                    <a href="impact.html" class="text-sm font-medium hover:text-emerald-400 transition">Impact</a>
-                    <a href="community.html" class="text-sm font-medium hover:text-emerald-400 transition">Community</a>
-                    <a href="about.html" class="text-sm font-medium hover:text-emerald-400 transition">About</a>
-                    <a href="contact.html" class="text-sm font-medium hover:text-emerald-400 transition">Contact</a>
-                </div>
-
-                <div class="flex items-center gap-4">
-                    <button id="themeToggle" class="p-2 hover:bg-emerald-500/10 rounded-lg transition">
-                        <i class="bi bi-moon-stars text-lg"></i>
-                    </button>
-                    <button id="rtlToggle" class="p-2 hover:bg-emerald-500/10 rounded-lg transition">
-                        <i class="bi bi-translate text-lg"></i>
-                    </button>
-                    <button class="relative p-2 hover:bg-emerald-500/10 rounded-lg transition">
-                        <i class="bi bi-bell text-lg"></i>
-                        <span class="absolute top-1 right-1 w-3 h-3 bg-emerald-500 rounded-full"></span>
-                    </button>
-                    <div class="relative">
-                        <button id="profileDropdownBtn" class="hidden sm:flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-bold rounded-xl hover:shadow-lg hover:shadow-emerald-500/30 transition-all duration-300">
-                            <i class="bi bi-person-circle"></i>
-                            <span>Profile</span>
-                            <i class="bi bi-chevron-down text-xs"></i>
-                        </button>
-                        <!-- Dropdown Menu -->
-                        <div id="profileDropdown" class="hidden absolute right-0 mt-2 w-48 bg-slate-900 border border-emerald-500/20 rounded-xl shadow-xl py-2 z-50">
-                            <a href="dashboard.html" class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-emerald-500/10 transition">
-                                <i class="bi bi-speedometer2"></i>
-                                Dashboard
-                            </a>
-                            <a href="login.html" class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-emerald-500/10 transition border-t border-emerald-500/10">
-                                <i class="bi bi-box-arrow-in-right"></i>
-                                Login
-                            </a>
-                        </div>
-                    </div>
-                    <button id="mobileMenuBtn" class="md:hidden p-2 hover:bg-emerald-500/10 rounded-lg transition">
-                        <i class="bi bi-list text-2xl"></i>
-                    </button>
-                </div>
             </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4 pb-4">
-                <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Home</a>
-                <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Enterprise</a>
-                <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Shop</a>
-                <a href="refill-station.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Refill</a>
-                <a href="membership.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Membership</a>
-                <a href="impact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Impact</a>
-                <a href="community.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Community</a>
-                <a href="about.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">About</a>
-                <a href="contact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Contact</a>
-                <hr class="border-emerald-500/20 my-2">
-                <a href="dashboard.html" class="block px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-lg font-bold">Profile</a>
-            </div>
-        </nav>
-    </header>
-
-    <div class="grid lg:grid-cols-5 min-h-screen gap-4">
-        <!-- Sidebar -->
-        <div class="lg:col-span-1 bg-slate-900/50 border-r border-emerald-500/20 p-6">
             <div class="space-y-4">
                 <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 bg-emerald-500 text-white rounded-lg transition">
                     <i class="bi bi-speedometer2"></i>
@@ -121,6 +71,9 @@
                 </a>
             </div>
         </div>
+
+        <!-- Sidebar Overlay (for mobile) -->
+        <div id="sidebarOverlay" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"></div>
 
         <!-- Main Content -->
         <div class="lg:col-span-4 p-6">

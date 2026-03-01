@@ -121,3 +121,21 @@ if (profileDropdownBtn && profileDropdown) {
         }
     });
 }
+// Dashboard Mobile Sidebar Toggle
+const dashboardMobileMenuBtn = document.getElementById('dashboardMobileMenuBtn');
+const dashboardSidebar = document.getElementById('dashboardSidebar');
+const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+if (dashboardMobileMenuBtn && dashboardSidebar) {
+    dashboardMobileMenuBtn.addEventListener('click', () => {
+        dashboardSidebar.classList.toggle('hidden');
+        if (sidebarOverlay) sidebarOverlay.classList.toggle('hidden');
+    });
+
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', () => {
+            dashboardSidebar.classList.add('hidden');
+            sidebarOverlay.classList.add('hidden');
+        });
+    }
+}
