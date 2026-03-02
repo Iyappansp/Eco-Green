@@ -177,6 +177,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Profile Dropdown Toggle
+    const profileDropdownBtn = document.getElementById('profileDropdownBtn');
+    const profileDropdown = document.getElementById('profileDropdown');
+
+    if (profileDropdownBtn && profileDropdown) {
+        profileDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            profileDropdown.classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!profileDropdown.contains(e.target) && !profileDropdownBtn.contains(e.target)) {
+                profileDropdown.classList.add('hidden');
+            }
+        });
+    }
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    }
+
     // Hash-based navigation for SPA (Deep-linking)
     function handleHash() {
         const hash = window.location.hash.substring(1);
