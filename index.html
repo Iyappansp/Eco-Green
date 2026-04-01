@@ -38,10 +38,7 @@
                     <button id="rtlToggle" class="p-2 hover:bg-emerald-500/10 rounded-lg transition">
                         <i class="bi bi-translate text-lg"></i>
                     </button>
-                    <button class="relative p-2 hover:bg-emerald-500/10 rounded-lg transition">
-                        <i class="bi bi-bag text-lg"></i>
-                        <span class="absolute top-1 right-1 w-5 h-5 bg-emerald-500 text-white text-xs flex items-center justify-center rounded-full">0</span>
-                    </button>
+
                     <a href="login.html" class="hidden sm:flex items-center gap-2 px-3 xl:px-6 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs xl:text-sm font-bold rounded-xl hover:shadow-lg hover:shadow-emerald-500/30 transition-all duration-300">
                         <i class="bi bi-box-arrow-in-right"></i>
                         <span>Login</span>
@@ -67,7 +64,7 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden lg:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4 pb-4">
+            <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 right-0 bg-slate-950/95 backdrop-blur-xl border-b border-emerald-500/20 px-6 py-6 space-y-4 shadow-2xl z-[100] animate-fade-down">
                 <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Home</a>
                 <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Enterprise</a>
                 <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Shop</a>
@@ -115,15 +112,15 @@
             <div class="grid grid-cols-3 gap-4 max-w-2xl mx-auto animate-fade-up" style="animation-delay: 0.3s">
                 <div class="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-xl backdrop-blur">
                     <div class="text-3xl font-bold text-emerald-400">100%</div>
-                    <div class="text-sm text-slate-300">Plastic-Free</div>
+                    <div class="text-sm text-slate-300 hero-banner-subtitle">Plastic-Free</div>
                 </div>
                 <div class="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-xl backdrop-blur">
                     <div class="text-3xl font-bold text-emerald-400">500+</div>
-                    <div class="text-sm text-slate-300">Products</div>
+                    <div class="text-sm text-slate-300 hero-banner-subtitle">Products</div>
                 </div>
                 <div class="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-xl backdrop-blur">
                     <div class="text-3xl font-bold text-emerald-400">50K+</div>
-                    <div class="text-sm text-slate-300">Members</div>
+                    <div class="text-sm text-slate-300 hero-banner-subtitle">Members</div>
                 </div>
             </div>
         </div>
@@ -135,25 +132,25 @@
             <h2 class="text-4xl font-bold text-center mb-16">How It Works</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="relative p-8 bg-gradient-to-br from-emerald-900/20 to-transparent border border-emerald-500/30 rounded-2xl">
-                    <div class="w-14 h-14 bg-emerald-500 rounded-full flex items-center justify-center text-2xl text-white font-bold mb-4">1</div>
+                <div class="relative p-8 bg-gradient-to-br from-emerald-900/20 to-transparent border border-emerald-500/30 rounded-2xl hover:border-emerald-500/50 transition-colors group">
+                    <div class="w-14 h-14 bg-emerald-500 rounded-full flex items-center justify-center text-2xl text-white font-bold mb-4 shadow-lg shadow-emerald-500/20">1</div>
                     <h3 class="text-2xl font-bold mb-4">Bring Your Containers</h3>
                     <p class="text-slate-300">Use your own jars, bottles, and containers. No plastic needed. We accept all clean, food-grade containers.</p>
-                    <div class="mt-6 text-4xl opacity-20">🫙</div>
+                    <i class="bi bi-box-seam-fill text-4xl text-emerald-400 opacity-40 group-hover:opacity-100 transition-opacity mt-6 block"></i>
                 </div>
 
-                <div class="relative p-8 bg-gradient-to-br from-emerald-900/20 to-transparent border border-emerald-500/30 rounded-2xl">
-                    <div class="w-14 h-14 bg-emerald-500 rounded-full flex items-center justify-center text-2xl text-white font-bold mb-4">2</div>
+                <div class="relative p-8 bg-gradient-to-br from-emerald-900/20 to-transparent border border-emerald-500/30 rounded-2xl hover:border-emerald-500/50 transition-colors group">
+                    <div class="w-14 h-14 bg-emerald-500 rounded-full flex items-center justify-center text-2xl text-white font-bold mb-4 shadow-lg shadow-emerald-500/20">2</div>
                     <h3 class="text-2xl font-bold mb-4">Refill & Shop</h3>
                     <p class="text-slate-300">Choose from 500+ sustainable products. Bulk grains, spices, oils, cleaning supplies, and personal care items.</p>
-                    <div class="mt-6 text-4xl opacity-20">🌾</div>
+                    <i class="bi bi-moisture text-4xl text-emerald-400 opacity-40 group-hover:opacity-100 transition-opacity mt-6 block"></i>
                 </div>
 
-                <div class="relative p-8 bg-gradient-to-br from-emerald-900/20 to-transparent border border-emerald-500/30 rounded-2xl">
-                    <div class="w-14 h-14 bg-emerald-500 rounded-full flex items-center justify-center text-2xl text-white font-bold mb-4">3</div>
+                <div class="relative p-8 bg-gradient-to-br from-emerald-900/20 to-transparent border border-emerald-500/30 rounded-2xl hover:border-emerald-500/50 transition-colors group">
+                    <div class="w-14 h-14 bg-emerald-500 rounded-full flex items-center justify-center text-2xl text-white font-bold mb-4 shadow-lg shadow-emerald-500/20">3</div>
                     <h3 class="text-2xl font-bold mb-4">Track Your Impact</h3>
                     <p class="text-slate-300">Watch your sustainability dashboard grow. See plastic saved, CO₂ reduced, and your environmental contribution.</p>
-                    <div class="mt-6 text-4xl opacity-20">📊</div>
+                    <i class="bi bi-graph-up-arrow text-4xl text-emerald-400 opacity-40 group-hover:opacity-100 transition-opacity mt-6 block"></i>
                 </div>
             </div>
         </div>
@@ -237,19 +234,19 @@
             
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="p-8 bg-gradient-to-br from-slate-800 to-slate-900 border border-emerald-500/20 rounded-2xl">
-                    <div class="text-4xl mb-4">👤</div>
+
                     <h3 class="text-2xl font-bold mb-4">Free Membership</h3>
                     <ul class="space-y-3 text-slate-300 mb-6">
-                        <li class="flex items-center gap-2">
-                            <i class="bi bi-check text-emerald-400"></i>
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle-fill text-emerald-500 mt-1"></i>
                             <span>10% discount on all refills</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <i class="bi bi-check text-emerald-400"></i>
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle-fill text-emerald-500 mt-1"></i>
                             <span>Track your impact</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <i class="bi bi-check text-emerald-400"></i>
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle-fill text-emerald-500 mt-1"></i>
                             <span>Newsletter updates</span>
                         </li>
                     </ul>
@@ -260,24 +257,24 @@
 
                 <div class="p-8 bg-gradient-to-br from-emerald-900/30 to-teal-900/30 border-2 border-emerald-500 rounded-2xl relative">
                     <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-bold rounded-full">Popular</div>
-                    <div class="text-4xl mb-4">🌱</div>
+
                     <h3 class="text-2xl font-bold mb-4">Eco Pro</h3>
                     <div class="text-2xl font-bold text-emerald-400 mb-6">₹999/year</div>
                     <ul class="space-y-3 text-slate-300 mb-6">
-                        <li class="flex items-center gap-2">
-                            <i class="bi bi-check text-emerald-400"></i>
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle-fill text-emerald-500 mt-1"></i>
                             <span>20% discount on all items</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <i class="bi bi-check text-emerald-400"></i>
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle-fill text-emerald-500 mt-1"></i>
                             <span>Monthly refill credits</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <i class="bi bi-check text-emerald-400"></i>
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle-fill text-emerald-500 mt-1"></i>
                             <span>Priority pickup slots</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <i class="bi bi-check text-emerald-400"></i>
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle-fill text-emerald-500 mt-1"></i>
                             <span>Exclusive events</span>
                         </li>
                     </ul>
@@ -287,24 +284,24 @@
                 </div>
 
                 <div class="p-8 bg-gradient-to-br from-slate-800 to-slate-900 border border-emerald-500/20 rounded-2xl">
-                    <div class="text-4xl mb-4">🌍</div>
+
                     <h3 class="text-2xl font-bold mb-4">Zero Hero</h3>
                     <div class="text-2xl font-bold text-emerald-400 mb-6">₹2,499/year</div>
                     <ul class="space-y-3 text-slate-300 mb-6">
-                        <li class="flex items-center gap-2">
-                            <i class="bi bi-check text-emerald-400"></i>
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle-fill text-emerald-500 mt-1"></i>
                             <span>30% discount all items</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <i class="bi bi-check text-emerald-400"></i>
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle-fill text-emerald-500 mt-1"></i>
                             <span>Weekly refill credits</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <i class="bi bi-check text-emerald-400"></i>
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle-fill text-emerald-500 mt-1"></i>
                             <span>Free home pickup</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <i class="bi bi-check text-emerald-400"></i>
+                        <li class="flex items-start gap-3">
+                            <i class="bi bi-check-circle-fill text-emerald-500 mt-1"></i>
                             <span>Custom sustainability report</span>
                         </li>
                     </ul>
@@ -324,7 +321,7 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
                     <div class="text-5xl font-bold text-emerald-400 mb-2">
-                        <span class="counter" data-target="2450000">0</span> kg
+                        <span class="counter" data-target="24500">0</span> kg
                     </div>
                     <p class="text-slate-300">Plastic Saved</p>
                     <p class="text-sm text-slate-400 mt-2">Equivalent to 122M plastic bags</p>
@@ -332,7 +329,7 @@
 
                 <div class="text-center">
                     <div class="text-5xl font-bold text-emerald-400 mb-2">
-                        <span class="counter" data-target="8750">0</span> tons
+                        <span class="counter" data-target="875">0</span> tons
                     </div>
                     <p class="text-slate-300">CO₂ Reduced</p>
                     <p class="text-sm text-slate-400 mt-2">Same as planting 145K trees</p>
@@ -340,7 +337,7 @@
 
                 <div class="text-center">
                     <div class="text-5xl font-bold text-emerald-400 mb-2">
-                        <span class="counter" data-target="180000">0</span>
+                        <span class="counter" data-target="1800">0</span>
                     </div>
                     <p class="text-slate-300">Active Members</p>
                     <p class="text-sm text-slate-400 mt-2">Growing daily</p>
@@ -367,10 +364,10 @@
     <!-- Footer -->
     <footer class="bg-slate-900 border-t border-emerald-500/20 mt-24">
         <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-16">
-            <div class="grid md:grid-cols-4 gap-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <div>
                     <a href="index.html" class="flex items-center mb-4 shrink-0 inline-block hover:scale-105 transition-transform duration-300">
-                        <img src="assets/logo.png" alt="EcoRefill Logo" class="h-32 w-auto max-w-none">
+                        <img src="assets/logo.png" alt="EcoRefill Logo" class="h-16 md:h-20 lg:h-24 xl:h-32 w-auto max-w-none">
                     </a>
                     <p class="text-sm text-slate-400 mb-4">Refill. Reuse. Reduce.</p>
                     <p class="text-xs text-slate-500">Building a zero-waste future, one refill at a time.</p>

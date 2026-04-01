@@ -60,7 +60,7 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden lg:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4 pb-4">
+            <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 right-0 bg-slate-950/95 backdrop-blur-xl border-b border-emerald-500/20 px-6 py-6 space-y-4 shadow-2xl z-[100] animate-fade-down">
                 <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Home</a>
                 <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Enterprise</a>
                 <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Shop</a>
@@ -99,28 +99,28 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="relative p-8 bg-gradient-to-br from-emerald-900/20 to-transparent border border-emerald-500/30 rounded-2xl">
                     <div class="absolute -top-4 -left-4 w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg">1</div>
-                    <div class="text-5xl mb-6 mt-4">🫙</div>
+                    <i class="bi bi-box-seam text-5xl text-emerald-400 mb-6 mt-4 block"></i>
                     <h3 class="text-xl font-bold mb-4">Bring Containers</h3>
                     <p class="text-slate-300 text-sm">Bring your clean, food-grade containers. We accept jars, bottles, and bags of any size.</p>
                 </div>
 
                 <div class="relative p-8 bg-gradient-to-br from-emerald-900/20 to-transparent border border-emerald-500/30 rounded-2xl">
                     <div class="absolute -top-4 -left-4 w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg">2</div>
-                    <div class="text-5xl mb-6 mt-4">⚖️</div>
+                    <i class="bi bi-speedometer2 text-5xl text-emerald-400 mb-6 mt-4 block"></i>
                     <h3 class="text-xl font-bold mb-4">Weigh In</h3>
                     <p class="text-slate-300 text-sm">We weigh your empty containers. No charge for the weight of your reusable containers.</p>
                 </div>
 
                 <div class="relative p-8 bg-gradient-to-br from-emerald-900/20 to-transparent border border-emerald-500/30 rounded-2xl">
                     <div class="absolute -top-4 -left-4 w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg">3</div>
-                    <div class="text-5xl mb-6 mt-4">🔄</div>
+                    <i class="bi bi-arrow-repeat text-5xl text-emerald-400 mb-6 mt-4 block"></i>
                     <h3 class="text-xl font-bold mb-4">Fill & Pay</h3>
                     <p class="text-slate-300 text-sm">Choose from 500+ products and fill your containers. Pay only for the product weight.</p>
                 </div>
 
                 <div class="relative p-8 bg-gradient-to-br from-emerald-900/20 to-transparent border border-emerald-500/30 rounded-2xl">
                     <div class="absolute -top-4 -left-4 w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg">4</div>
-                    <div class="text-5xl mb-6 mt-4">🎁</div>
+                    <i class="bi bi-gift text-5xl text-emerald-400 mb-6 mt-4 block"></i>
                     <h3 class="text-xl font-bold mb-4">Earn Credits</h3>
                     <p class="text-slate-300 text-sm">Every refill earns you credits & impact points. Track your sustainability journey.</p>
                 </div>
@@ -248,8 +248,8 @@
                     <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-[2rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
                     <div class="relative h-full overflow-hidden rounded-[2rem] border border-emerald-500/20 shadow-2xl">
                         <img src="assets/image.png" alt="Sustainability illustration" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent flex items-end p-6">
-                            <p class="text-white text-sm font-medium italic drop-shadow-lg">"Small changes lead to a massive impact."</p>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent flex items-end p-6">
+                            <!-- <p class="text-white text-sm font-medium italic drop-shadow-xl font-semibold">"Small changes lead to a massive impact."</p> -->
                         </div>
                     </div>
                 </div>
@@ -264,7 +264,7 @@
                 <div class="p-6 bg-slate-800/50 border border-emerald-500/20 rounded-xl">
                     <div class="flex items-center justify-between cursor-pointer group">
                         <h3 class="font-bold text-lg">What containers can I bring?</h3>
-                        <i class="bi bi-chevron-down group-hover:rotate-180 transition-transform"></i>
+                        <i class="bi bi-plus-lg group-hover:rotate-45 transition-transform"></i>
                     </div>
                     <p class="text-slate-400 mt-4 hidden group-hover:block">Any clean, food-grade containers like glass jars, stainless steel bottles, cloth bags, or plastic containers. We don't accept containers with odors or residue.</p>
                 </div>
@@ -272,7 +272,7 @@
                 <div class="p-6 bg-slate-800/50 border border-emerald-500/20 rounded-xl">
                     <div class="flex items-center justify-between cursor-pointer group">
                         <h3 class="font-bold text-lg">Do I need to register before refilling?</h3>
-                        <i class="bi bi-chevron-down group-hover:rotate-180 transition-transform"></i>
+                        <i class="bi bi-plus-lg group-hover:rotate-45 transition-transform"></i>
                     </div>
                     <p class="text-slate-400 mt-4 hidden group-hover:block">No, you can refill without membership. However, registered members get discounts and earn refill credits that can be redeemed.</p>
                 </div>
@@ -280,7 +280,7 @@
                 <div class="p-6 bg-slate-800/50 border border-emerald-500/20 rounded-xl">
                     <div class="flex items-center justify-between cursor-pointer group">
                         <h3 class="font-bold text-lg">What are the opening hours?</h3>
-                        <i class="bi bi-chevron-down group-hover:rotate-180 transition-transform"></i>
+                        <i class="bi bi-plus-lg group-hover:rotate-45 transition-transform"></i>
                     </div>
                     <p class="text-slate-400 mt-4 hidden group-hover:block">Monday-Sunday: 9:00 AM - 7:00 PM. We're closed on public holidays. Book a slot in advance for guaranteed service.</p>
                 </div>
@@ -288,22 +288,20 @@
                 <div class="p-6 bg-slate-800/50 border border-emerald-500/20 rounded-xl">
                     <div class="flex items-center justify-between cursor-pointer group">
                         <h3 class="font-bold text-lg">Can I order online and refill later?</h3>
-                        <i class="bi bi-chevron-down group-hover:rotate-180 transition-transform"></i>
+                        <i class="bi bi-plus-lg group-hover:rotate-45 transition-transform"></i>
                     </div>
                     <p class="text-slate-400 mt-4 hidden group-hover:block">Yes! Order online, choose a refill pickup slot, and collect your products at the scheduled time. We'll keep your order fresh for you.</p>
                 </div>
-            </div>
         </div>
-    </div>
     </div>
 
     <!-- Footer -->
     <footer class="bg-slate-900 border-t border-emerald-500/20 mt-24">
         <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-16">
-            <div class="grid md:grid-cols-4 gap-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <div>
                     <a href="index.html" class="flex items-center mb-4 shrink-0 inline-block hover:scale-105 transition-transform duration-300">
-                        <img src="assets/logo.png" alt="EcoRefill Logo" class="h-32 w-auto max-w-none">
+                        <img src="assets/logo.png" alt="EcoRefill Logo" class="h-16 md:h-20 lg:h-24 xl:h-32 w-auto max-w-none">
                     </a>
                     <p class="text-sm text-slate-400 mb-4">Refill. Reuse. Reduce.</p>
                     <p class="text-xs text-slate-500">Building a zero-waste future, one refill at a time.</p>

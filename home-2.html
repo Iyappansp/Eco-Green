@@ -8,22 +8,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .glass-card {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(16, 185, 129, 0.1);
-        }
-        html.light .glass-card {
-            background: rgba(255, 255, 255, 0.7);
+        <!-- html.light .glass-card {
+            background: rgba(255, 255, 255, 0.8);
             border: 1px solid rgba(16, 185, 129, 0.2);
-        }
+        } -->
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 transition-colors duration-300">
@@ -98,8 +86,8 @@
     <section class="relative py-24 overflow-hidden">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="assets/hero-bg.png" alt="Hero Background" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-slate-950/85 backdrop-blur-[2px]"></div>
+            <img src="assets/enterprise_hero.png" alt="Hero Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-950/70 backdrop-blur-[2px] hero-banner-overlay"></div>
         </div>
         <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[120px] z-1"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-1">
@@ -107,10 +95,10 @@
                 <div class="animate-fade-up">
                     <span class="inline-block px-4 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-bold mb-6">Enterprise Sustainability</span>
                     <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6 hero-banner-title">
-                        Scaling Zero-Waste for <span class="gradient-text">Modern Business</span>
+                        Powering the Future of <span class="gradient-text">Zero-Waste Business</span>
                     </h1>
-                    <p class="text-xl text-slate-400 mb-10 leading-relaxed hero-banner-subtitle">
-                        Join the circular economy revolution. We provide end-to-end zero-waste supply chain solutions for offices, hotels, and retail chains. Reduce your carbon footprint with our smart refill infrastructure.
+                    <p class="text-xl text-slate-300 mb-10 leading-relaxed hero-banner-subtitle">
+                        Seamless circular supply chains for global enterprises. Reduce overhead, eliminate plastic waste, and lead the ESG revolution with our smart infrastructure.
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <button class="px-8 py-4 bg-emerald-500 text-white rounded-xl font-bold hover:shadow-lg hover:shadow-emerald-500/30 transition-all">Get Enterprise Quote</button>
@@ -123,24 +111,24 @@
                     <div class="glass-card p-8 rounded-3xl border border-emerald-500/20 shadow-2xl relative z-10">
                         <div class="grid grid-cols-2 gap-6">
                             <div class="p-6 bg-slate-900/50 rounded-2xl border border-emerald-500/10">
-                                <div class="text-4xl mb-4">🏢</div>
-                                <h3 class="font-bold mb-2">Office Pantry</h3>
-                                <p class="text-sm text-slate-400">Automated refill dispensers for beverages and snacks.</p>
+                                <i class="bi bi-building-fill text-3xl text-emerald-400 mb-4 block"></i>
+                                <h3 class="font-bold mb-2">Managed Refill Hubs</h3>
+                                <p class="text-sm text-slate-400">Automated dispensers for corporate office pantries.</p>
                             </div>
                             <div class="p-6 bg-slate-900/50 rounded-2xl border border-emerald-500/10">
-                                <div class="text-4xl mb-4">🏨</div>
-                                <h3 class="font-bold mb-2">Hospitality</h3>
-                                <p class="text-sm text-slate-400">Bulk personal care refills for hotel chains.</p>
+                                <i class="bi bi-hospital text-3xl text-emerald-400 mb-4 block"></i>
+                                <h3 class="font-bold mb-2">Sustainable Hospitality</h3>
+                                <p class="text-sm text-slate-400">Bulk personal care refills for premium hotel chains.</p>
                             </div>
                             <div class="p-6 bg-slate-900/50 rounded-2xl border border-emerald-500/10">
-                                <div class="text-4xl mb-4">🏬</div>
-                                <h3 class="font-bold mb-2">Retail Nodes</h3>
-                                <p class="text-sm text-slate-400">Smart refill kiosks for local grocery partners.</p>
+                                <i class="bi bi-shop text-3xl text-emerald-400 mb-4 block"></i>
+                                <h3 class="font-bold mb-2">Retail Integration</h3>
+                                <p class="text-sm text-slate-400">Smart refill kiosks for modern grocery partners.</p>
                             </div>
                             <div class="p-6 bg-slate-900/50 rounded-2xl border border-emerald-500/10">
-                                <div class="text-4xl mb-4">📦</div>
-                                <h3 class="font-bold mb-2">Eco-Logistics</h3>
-                                <p class="text-sm text-slate-400">Circular packaging and return logistics.</p>
+                                <i class="bi bi-box-seam text-3xl text-emerald-400 mb-4 block"></i>
+                                <h3 class="font-bold mb-2">Closed-Loop Logistics</h3>
+                                <p class="text-sm text-slate-400">Circular packaging and automated return systems.</p>
                             </div>
                         </div>
                     </div>
@@ -151,32 +139,33 @@
     </section>
 
     <!-- Deep Content Section -->
-    <section class="py-24 bg-slate-900/30">
+    <section class="py-24 bg-slate-900/50 border-y border-emerald-500/10">
         <div class="max-w-4xl mx-auto px-4 text-center mb-16">
-            <h2 class="text-4xl font-bold mb-6">Built for Impact, Designed for Efficiency</h2>
-            <p class="text-lg text-slate-400">Our enterprise platform provides the transparency and scalability required for modern ESG reporting and sustainable growth.</p>
+            <span class="text-emerald-400 font-bold uppercase tracking-widest text-sm mb-4 block">Enterprise Services</span>
+            <h2 class="text-4xl lg:text-5xl font-bold mb-6">Designed for Global Scalability</h2>
+            <p class="text-lg text-slate-400">Our enterprise ecosystem provides the transparency, security, and scalability required for multi-location ESG excellence.</p>
         </div>
         
         <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
-            <div class="p-10 glass-card rounded-3xl animate-fade-up">
+            <div class="p-10 glass-card rounded-3xl animate-fade-up flex flex-col items-start h-full">
                 <i class="bi bi-shield-check text-4xl text-emerald-400 mb-6 block"></i>
                 <h3 class="text-2xl font-bold mb-4">Certified Compliance</h3>
-                <p class="text-slate-400 leading-relaxed mb-6">We ensure all refill processes meet international food safety and hygiene standards. Our automated systems track LOT numbers and expiry dates in real-time for complete traceability.</p>
-                <a href="#" class="text-emerald-400 font-bold hover:underline">Read Policy →</a>
+                <p class="text-slate-400 leading-relaxed mb-6 flex-grow">We ensure all refill processes meet international food safety and hygiene standards. Our automated systems track LOT numbers and expiry dates in real-time for complete traceability.</p>
+                <a href="#" class="text-emerald-400 font-bold hover:underline inline-flex items-center gap-1">Read Policy <i class="bi bi-arrow-right"></i></a>
             </div>
             
-            <div class="p-10 glass-card rounded-3xl animate-fade-up" style="animation-delay: 0.1s">
+            <div class="p-10 glass-card rounded-3xl animate-fade-up flex flex-col items-start h-full" style="animation-delay: 0.1s">
                 <i class="bi bi-cpu text-4xl text-emerald-400 mb-6 block"></i>
                 <h3 class="text-2xl font-bold mb-4">Smart Infrastructure</h3>
-                <p class="text-slate-400 leading-relaxed mb-6">IoT-enabled dispensers provide predictive maintenance and automatic restocking alerts. Your facility team receives instant notifications when supplies are low.</p>
-                <a href="#" class="text-emerald-400 font-bold hover:underline">Explore Tech →</a>
+                <p class="text-slate-400 leading-relaxed mb-6 flex-grow">IoT-enabled dispensers provide predictive maintenance and automatic restocking alerts. Your facility team receives instant notifications when supplies are low.</p>
+                <a href="#" class="text-emerald-400 font-bold hover:underline inline-flex items-center gap-1">Explore Tech <i class="bi bi-arrow-right"></i></a>
             </div>
 
-            <div class="p-10 glass-card rounded-3xl animate-fade-up" style="animation-delay: 0.2s">
+            <div class="p-10 glass-card rounded-3xl animate-fade-up flex flex-col items-start h-full" style="animation-delay: 0.2s">
                 <i class="bi bi-graph-up-arrow text-4xl text-emerald-400 mb-6 block"></i>
                 <h3 class="text-2xl font-bold mb-4">ESG Analytics</h3>
-                <p class="text-slate-400 leading-relaxed mb-6">Generate ready-to-use sustainability reports for your investors. Track precise plastic savings, water reduction, and CO2 offset metrics across all office locations.</p>
-                <a href="#" class="text-emerald-400 font-bold hover:underline">View Dashboard →</a>
+                <p class="text-slate-400 leading-relaxed mb-6 flex-grow">Generate ready-to-use sustainability reports for your investors. Track precise plastic savings, water reduction, and CO2 offset metrics across all office locations.</p>
+                <a href="#" class="text-emerald-400 font-bold hover:underline inline-flex items-center gap-1">View Dashboard <i class="bi bi-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -189,11 +178,11 @@
                     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Sustainable Office" class="rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
                 <div class="order-1 lg:order-2 animate-fade-up" style="animation-delay: 0.2s">
-                    <h2 class="text-4xl font-bold mb-8">Why Circular Economy Matters</h2>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-8">Impact & Trust: Driving Tangible Change</h2>
                     <div class="space-y-6 text-slate-400 leading-loose">
-                        <p class="px-1">In a world of finite resources, the traditional "take-make-waste" model is no longer viable. Businesses today face increasing pressure from consumers, regulators, and investors to transition toward circular models that eliminate waste at the source.</p>
-                        <p class="px-1">At EcoRefill, we believe that sustainability should be a silent, efficient partner to your core business operations. Our Enterprise 2.0 platform isn't just about saving the planet—it's about operational excellence. By eliminating single-use packaging, we help you reduce waste management costs by up to 40% while enhancing your brand's reputation.</p>
-                        <p class="px-1">Our comprehensive onboarding includes site assessments, infrastructure installation, and employee training programs designed to foster a culture of sustainability within your organization.</p>
+                        <p class="px-1 text-lg">In a global economy defined by finite resources, the traditional "take-make-waste" model is a liability. Modern leaders are choosing circularity to future-proof their operations.</p>
+                        <p class="px-1">At EcoRefill, we integrate sustainability as a silent, high-performance engine within your enterprise. Our platform goes beyond simple waste reduction—it delivers **unmatched operational excellence**. By digitizing your circular supply chain, we help you slash redundant costs by up to 40% while building an authentic, verified brand legacy.</p>
+                        <p class="px-1">Every refill station is an IoT-powered transparency node, feeding real-time data into your ESG reports, ensuring that your commitment to the planet is visible, verifiable, and valuable.</p>
                     </div>
                     <div class="mt-10 grid grid-cols-2 gap-8">
                         <div>
@@ -204,6 +193,48 @@
                             <div class="text-3xl font-bold text-emerald-400">Zero</div>
                             <div class="text-sm font-semibold uppercase tracking-wider">Plastic Waste</div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Simple Onboarding -->
+    <section class="py-24 bg-slate-900/30 border-t border-emerald-500/10">
+        <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="max-w-xl">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">Simple Onboarding</h2>
+                    <p class="text-lg text-slate-400 mb-8">Transitioning to zero-waste has never been easier. We handle the complexity so you can focus on your core business.</p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center font-bold text-xl">1</div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Audit & Strategy</h3>
+                                <p class="text-slate-400">We analyze your waste streams and define a customized transition roadmap.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center font-bold text-xl">2</div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Infrastructure Setup</h3>
+                                <p class="text-slate-400">Rapid deployment of smart dispensers and IoT tracking systems at your sites.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center font-bold text-xl">3</div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Launch & Scale</h3>
+                                <p class="text-slate-400">Employee training, platform access, and periodic ESG reporting begin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative w-full max-w-lg">
+                    <div class="absolute -inset-4 bg-emerald-500/20 rounded-[40px] blur-3xl"></div>
+                    <div class="relative glass-card p-4 rounded-[40px] overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Strategy Session" class="rounded-[32px]">
                     </div>
                 </div>
             </div>

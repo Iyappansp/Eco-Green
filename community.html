@@ -60,7 +60,7 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden lg:hidden mt-4 space-y-2 border-t border-emerald-500/20 pt-4 pb-4">
+            <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 right-0 bg-slate-950/95 backdrop-blur-xl border-b border-emerald-500/20 px-6 py-6 space-y-4 shadow-2xl z-[100] animate-fade-down">
                 <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Home</a>
                 <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Enterprise</a>
                 <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Shop</a>
@@ -98,16 +98,19 @@
             
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl overflow-hidden hover:border-emerald-500 transition">
-                    <div class="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 p-6 border-b border-emerald-500/20">
-                        <div class="flex items-start justify-between mb-4">
-                            <div>
-                                <h3 class="text-2xl font-bold">Zero-Waste Workshop</h3>
-                                <p class="text-slate-400 mt-2">Learn how to reduce waste in your daily life</p>
-                            </div>
-                            <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-500 text-emerald-400 text-xs font-bold rounded-full">April 5, 2026</span>
+                        <div class="h-48 relative overflow-hidden">
+                            <img src="assets/images/zero-waste-workshop.png" alt="Zero-Waste Workshop" class="w-full h-full object-cover">
                         </div>
-                    </div>
-                    <div class="p-6">
+                        <div class="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 p-6 border-b border-emerald-500/20">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold">Zero-Waste Workshop</h3>
+                                    <p class="text-slate-400 mt-2">Learn how to reduce waste in your daily life</p>
+                                </div>
+                                <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-500 text-emerald-400 text-xs font-bold rounded-full text-white">April 5, 2026</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
                         <div class="flex items-center gap-2 mb-4 text-sm text-slate-400">
                             <i class="bi bi-geo-alt"></i>
                             <span>Marina Drive, Downtown</span>
@@ -120,23 +123,26 @@
                             <i class="bi bi-people"></i>
                             <span>45 attendees</span>
                         </div>
-                        <button class="w-full py-2 border border-emerald-500 text-emerald-400 font-bold rounded-lg hover:bg-emerald-500/10 transition text-sm">
+                        <button class="w-full py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-emerald-500/20 transition text-sm">
                             Register Now
                         </button>
                     </div>
                 </div>
 
                 <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl overflow-hidden hover:border-emerald-500 transition">
-                    <div class="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 p-6 border-b border-emerald-500/20">
-                        <div class="flex items-start justify-between mb-4">
-                            <div>
-                                <h3 class="text-2xl font-bold">Community Cleanup Day</h3>
-                                <p class="text-slate-400 mt-2">Join us for a beach cleanup initiative</p>
-                            </div>
-                            <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-500 text-emerald-400 text-xs font-bold rounded-full">April 12, 2026</span>
+                        <div class="h-48 relative overflow-hidden">
+                            <img src="assets/images/community-cleanup.png" alt="Community Cleanup" class="w-full h-full object-cover">
                         </div>
-                    </div>
-                    <div class="p-6">
+                        <div class="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 p-6 border-b border-emerald-500/20">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold">Community Cleanup Day</h3>
+                                    <p class="text-slate-400 mt-2">Join us for a beach cleanup initiative</p>
+                                </div>
+                                <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-500 text-emerald-400 text-xs font-bold rounded-full text-white">April 12, 2026</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
                         <div class="flex items-center gap-2 mb-4 text-sm text-slate-400">
                             <i class="bi bi-geo-alt"></i>
                             <span>Versova Beach</span>
@@ -149,8 +155,8 @@
                             <i class="bi bi-people"></i>
                             <span>120 attendees</span>
                         </div>
-                        <button class="w-full py-2 border border-emerald-500 text-emerald-400 font-bold rounded-lg hover:bg-emerald-500/10 transition text-sm">
-                            Join Us
+                        <button class="w-full py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-emerald-500/20 transition text-sm">
+                            Register Now
                         </button>
                     </div>
                 </div>
@@ -163,21 +169,27 @@
             
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-8 hover:border-emerald-500 transition">
-                    <div class="w-16 h-24 rounded-full bg-gradient-to-br from-emerald-400 to-teal-400 flex items-center justify-center text-2xl mb-4">👩</div>
+                    <div class="w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-emerald-500/30">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Priya" class="w-full h-full object-cover">
+                    </div>
                     <h3 class="text-xl font-bold mb-2">Priya's Journey</h3>
                     <p class="text-slate-400 mb-4">"EcoRefill helped me reduce my plastic consumption by 90%. It's amazing to see my impact growing every month."</p>
                     <p class="text-sm text-emerald-400 font-semibold">Saved 450 kg plastic in 8 months</p>
                 </div>
 
                 <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-8 hover:border-emerald-500 transition">
-                    <div class="w-16 h-24 rounded-full bg-gradient-to-br from-emerald-400 to-teal-400 flex items-center justify-center text-2xl mb-4">👨</div>
+                    <div class="w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-emerald-500/30">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Rajesh" class="w-full h-full object-cover">
+                    </div>
                     <h3 class="text-xl font-bold mb-2">Rajesh's Experience</h3>
                     <p class="text-slate-400 mb-4">"The quality of products is excellent and the refill process is so convenient. Highly recommended!"</p>
                     <p class="text-sm text-emerald-400 font-semibold">Member for 2 years</p>
                 </div>
 
                 <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl p-8 hover:border-emerald-500 transition">
-                    <div class="w-16 h-24 rounded-full bg-gradient-to-br from-emerald-400 to-teal-400 flex items-center justify-center text-2xl mb-4">👩‍👧</div>
+                    <div class="w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-emerald-500/30">
+                        <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=150&q=80" alt="Aisha" class="w-full h-full object-cover">
+                    </div>
                     <h3 class="text-xl font-bold mb-2">Aisha's Impact</h3>
                     <p class="text-slate-400 mb-4">"I love that our family is teaching kids about sustainability. EcoRefill makes it easy and fun."</p>
                     <p class="text-sm text-emerald-400 font-semibold">Saved 320 kg plastic with family</p>
@@ -192,7 +204,7 @@
             
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <div>
-                    <h3 class="text-2xl font-bold mb-4">🌱 What You'll Do</h3>
+                    <h3 class="text-2xl font-bold mb-4">Sustainability Ambassador</h3>
                     <ul class="space-y-2 text-slate-300 text-sm">
                         <li>✓ Organize local events</li>
                         <li>✓ Educate about sustainability</li>
@@ -231,7 +243,9 @@
             
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl overflow-hidden hover:border-emerald-500 transition">
-                    <div class="h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 flex items-center justify-center text-6xl">📚</div>
+                    <div class="h-48 relative overflow-hidden group">
+                        <img src="zero_waste_article_img_1775063593164.png" alt="Zero-Waste Living" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
                     <div class="p-6">
                         <span class="text-xs text-emerald-400 font-bold">March 28, 2026</span>
                         <h3 class="text-xl font-bold mt-2 mb-4">5 Tips to Start Zero-Waste Living</h3>
@@ -241,7 +255,9 @@
                 </div>
 
                 <div class="bg-slate-800/50 border border-emerald-500/20 rounded-2xl overflow-hidden hover:border-emerald-500 transition">
-                    <div class="h-48 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 flex items-center justify-center text-6xl">🌱</div>
+                    <div class="h-48 relative overflow-hidden group">
+                        <img src="bulk_shopping_article_img_1775063614564.png" alt="Bulk Shopping" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
                     <div class="p-6">
                         <span class="text-xs text-emerald-400 font-bold">March 25, 2026</span>
                         <h3 class="text-xl font-bold mt-2 mb-4">How Bulk Shopping Reduces Plastic Waste</h3>
@@ -256,10 +272,10 @@
     <!-- Footer -->
     <footer class="bg-slate-900 border-t border-emerald-500/20 mt-24">
         <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-16">
-            <div class="grid md:grid-cols-4 gap-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <div>
                     <a href="index.html" class="flex items-center mb-4 shrink-0 inline-block hover:scale-105 transition-transform duration-300">
-                        <img src="assets/logo.png" alt="EcoRefill Logo" class="h-32 w-auto max-w-none">
+                        <img src="assets/logo.png" alt="EcoRefill Logo" class="h-16 md:h-20 lg:h-24 xl:h-32 w-auto max-w-none">
                     </a>
                     <p class="text-sm text-slate-400 mb-4">Refill. Reuse. Reduce.</p>
                     <p class="text-xs text-slate-500">Building a zero-waste future, one refill at a time.</p>
