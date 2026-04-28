@@ -46,19 +46,27 @@ document.addEventListener('DOMContentLoaded', () => {
             if (rtlThumb) {
                 if (dir === 'rtl') {
                     rtlThumb.classList.remove('translate-x-1');
-                    rtlThumb.classList.add('translate-x-5');
+                    rtlThumb.classList.add('translate-x-7');
                     rtlThumb.classList.add('bg-emerald-400');
                     rtlThumb.classList.remove('bg-slate-400');
+                    
+                    if (rtlText) {
+                        rtlText.classList.remove('right-2');
+                        rtlText.classList.add('left-2');
+                        rtlText.textContent = 'LTR';
+                    }
                 } else {
-                    rtlThumb.classList.remove('translate-x-5');
+                    rtlThumb.classList.remove('translate-x-7');
                     rtlThumb.classList.add('translate-x-1');
                     rtlThumb.classList.remove('bg-emerald-400');
                     rtlThumb.classList.add('bg-slate-400');
+                    
+                    if (rtlText) {
+                        rtlText.classList.remove('left-2');
+                        rtlText.classList.add('right-2');
+                        rtlText.textContent = 'RTL';
+                    }
                 }
-            }
-
-            if (rtlText) {
-                rtlText.textContent = dir === 'rtl' ? 'LTR' : 'RTL';
             }
         }
     }
