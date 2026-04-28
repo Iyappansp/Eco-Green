@@ -38,9 +38,25 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateRtl(dir) {
         html.setAttribute('dir', dir);
         localStorage.setItem('dir', dir);
-        const rtlBadge = rtlToggle ? rtlToggle.querySelector('span') : null;
-        if (rtlBadge) {
-            rtlBadge.textContent = dir === 'rtl' ? 'LTR' : 'RTL';
+        
+        if (rtlToggle) {
+            const rtlBadge = rtlToggle.querySelector('span');
+            const rtlIcon = rtlToggle.querySelector('i');
+            
+            if (rtlBadge) {
+                rtlBadge.textContent = dir === 'rtl' ? 'LTR' : 'RTL';
+            }
+            
+            if (rtlIcon) {
+                // Toggle between translate and a globe or similar for visual variety
+                if (dir === 'rtl') {
+                    rtlIcon.classList.remove('bi-translate');
+                    rtlIcon.classList.add('bi-globe');
+                } else {
+                    rtlIcon.classList.remove('bi-globe');
+                    rtlIcon.classList.add('bi-translate');
+                }
+            }
         }
     }
 
