@@ -39,9 +39,13 @@
                     <button id="themeToggle" class="p-2 hover:bg-emerald-500/10 rounded-lg transition">
                         <i class="bi bi-moon-stars text-lg"></i>
                     </button>
-                    <button id="rtlToggle" class="p-2 hover:bg-emerald-500/10 rounded-lg transition flex items-center gap-2">
-                        <i class="bi bi-translate text-lg"></i>
-                        <span class="text-xs font-bold">RTL</span>
+                    <button id="rtlToggle"
+                        class="relative inline-flex h-6 w-12 items-center rounded-full bg-slate-800 border border-emerald-500/20 transition-all duration-300 focus:outline-none group"
+                        title="Toggle RTL">
+                        <span id="rtlThumb"
+                            class="inline-block h-4 w-4 transform rounded-full bg-slate-400 transition-all duration-300 translate-x-1"></span>
+                        <span
+                            class="absolute right-1.5 text-[9px] font-bold text-slate-400 group-hover:text-emerald-400 transition-colors">RTL</span>
                     </button>
 
                     <a href="login.html"

@@ -40,22 +40,25 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('dir', dir);
         
         if (rtlToggle) {
-            const rtlBadge = rtlToggle.querySelector('span');
-            const rtlIcon = rtlToggle.querySelector('i');
+            const rtlThumb = document.getElementById('rtlThumb');
+            const rtlText = rtlToggle.querySelector('span:not(#rtlThumb):not(.sr-only)');
             
-            if (rtlBadge) {
-                rtlBadge.textContent = dir === 'rtl' ? 'LTR' : 'RTL';
-            }
-            
-            if (rtlIcon) {
-                // Toggle between translate and a globe or similar for visual variety
+            if (rtlThumb) {
                 if (dir === 'rtl') {
-                    rtlIcon.classList.remove('bi-translate');
-                    rtlIcon.classList.add('bi-globe');
+                    rtlThumb.classList.remove('translate-x-1');
+                    rtlThumb.classList.add('translate-x-5');
+                    rtlThumb.classList.add('bg-emerald-400');
+                    rtlThumb.classList.remove('bg-slate-400');
                 } else {
-                    rtlIcon.classList.remove('bi-globe');
-                    rtlIcon.classList.add('bi-translate');
+                    rtlThumb.classList.remove('translate-x-5');
+                    rtlThumb.classList.add('translate-x-1');
+                    rtlThumb.classList.remove('bg-emerald-400');
+                    rtlThumb.classList.add('bg-slate-400');
                 }
+            }
+
+            if (rtlText) {
+                rtlText.textContent = dir === 'rtl' ? 'LTR' : 'RTL';
             }
         }
     }
