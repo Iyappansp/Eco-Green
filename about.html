@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="bg-slate-950 text-slate-100 transition-colors duration-300">
     <!-- Header -->
     <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-emerald-500/20">
         <nav class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-2">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center shrink-0">
-                    <img src="assets/logo.png" alt="EcoRefill Logo" class="h-10 sm:h-12 lg:h-14 xl:h-16 w-auto hover:scale-105 transition-transform duration-300">
+                    <img src="assets/logo1.png" alt="EcoRefill Logo"
+                        class="h-12 sm:h-14 lg:h-16 xl:h-20 w-auto hover:scale-105 transition-transform duration-300">
                 </a>
                 <div class="hidden lg:flex items-center gap-2 xl:gap-6 text-xs lg:text-[13px] xl:text-sm font-medium">
                     <a href="index.html" class="hover:text-emerald-400 transition">Home</a>
@@ -35,19 +38,23 @@
                     <button id="rtlToggle" class="p-2 hover:bg-emerald-500/10 rounded-lg transition">
                         <i class="bi bi-translate text-lg"></i>
                     </button>
-                    <a href="login.html" class="hidden sm:flex items-center gap-2 px-3 xl:px-6 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs xl:text-sm font-bold rounded-xl hover:shadow-lg hover:shadow-emerald-500/30 transition-all duration-300">
+                    <a href="login.html"
+                        class="hidden sm:flex items-center gap-2 px-3 xl:px-6 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs xl:text-sm font-bold rounded-xl hover:shadow-lg hover:shadow-emerald-500/30 transition-all duration-300">
                         <i class="bi bi-box-arrow-in-right"></i>
                         <span>Login</span>
                     </a>
                     <div class="relative">
-                        <button id="profileDropdownBtn" class="hidden sm:flex items-center gap-1 xl:gap-2 px-2 xl:px-4 py-2.5 bg-slate-900 border border-emerald-500/20 text-slate-300 text-xs xl:text-sm font-bold rounded-xl hover:bg-emerald-500/10 transition-all duration-300">
+                        <button id="profileDropdownBtn"
+                            class="hidden sm:flex items-center gap-1 xl:gap-2 px-2 xl:px-4 py-2.5 bg-slate-900 border border-emerald-500/20 text-slate-300 text-xs xl:text-sm font-bold rounded-xl hover:bg-emerald-500/10 transition-all duration-300">
                             <i class="bi bi-person-circle"></i>
                             <span>Profile</span>
                             <i class="bi bi-chevron-down text-[10px] xl:text-xs"></i>
                         </button>
                         <!-- Dropdown Menu -->
-                        <div id="profileDropdown" class="hidden absolute right-0 mt-2 w-48 bg-slate-900 border border-emerald-500/20 rounded-xl shadow-xl py-2 z-50">
-                            <a href="dashboard.html" class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-emerald-500/10 transition">
+                        <div id="profileDropdown"
+                            class="hidden absolute right-0 mt-2 w-48 bg-slate-900 border border-emerald-500/20 rounded-xl shadow-xl py-2 z-50">
+                            <a href="dashboard.html"
+                                class="flex items-center gap-3 px-4 py-2 text-sm hover:bg-emerald-500/10 transition">
                                 <i class="bi bi-speedometer2"></i>
                                 Dashboard
                             </a>
@@ -60,18 +67,29 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 right-0 bg-slate-950/95 backdrop-blur-xl border-b border-emerald-500/20 px-6 py-6 space-y-4 shadow-2xl z-[100] animate-fade-down">
-                <a href="index.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Home</a>
-                <a href="home-2.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Enterprise</a>
-                <a href="shop.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Shop</a>
-                <a href="refill-station.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Refill</a>
-                <a href="membership.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Membership</a>
-                <a href="impact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Impact</a>
-                <a href="community.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Community</a>
-                <a href="about.html" class="block px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-lg font-bold">About</a>
-                <a href="contact.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Contact</a>
+            <div id="mobileMenu"
+                class="hidden lg:hidden absolute top-full left-0 right-0 bg-slate-950/95 backdrop-blur-xl border-b border-emerald-500/20 px-6 py-6 space-y-4 shadow-2xl z-[100] animate-fade-down">
+                <a href="index.html"
+                    class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Home</a>
+                <a href="home-2.html"
+                    class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Enterprise</a>
+                <a href="shop.html"
+                    class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Shop</a>
+                <a href="refill-station.html"
+                    class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Refill</a>
+                <a href="membership.html"
+                    class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Membership</a>
+                <a href="impact.html"
+                    class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Impact</a>
+                <a href="community.html"
+                    class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Community</a>
+                <a href="about.html"
+                    class="block px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-lg font-bold">About</a>
+                <a href="contact.html"
+                    class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-slate-300">Contact</a>
                 <hr class="border-emerald-500/20 my-2">
-                <a href="dashboard.html" class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-emerald-400 font-bold">Profile</a>
+                <a href="dashboard.html"
+                    class="block px-4 py-2 hover:bg-emerald-500/10 rounded-lg transition text-emerald-400 font-bold">Profile</a>
             </div>
         </nav>
     </header>
@@ -85,7 +103,8 @@
             <!-- Hero -->
             <div class="text-center mb-20">
                 <h1 class="text-5xl font-bold mb-4 hero-banner-title">About EcoRefill</h1>
-                <p class="text-xl text-slate-300 hero-banner-subtitle">Building a zero-waste future, one refill at a time</p>
+                <p class="text-xl text-slate-300 hero-banner-subtitle">Building a zero-waste future, one refill at a
+                    time</p>
             </div>
         </div>
     </section>
@@ -95,15 +114,25 @@
         <div class="grid md:grid-cols-2 gap-12 mb-20 items-center">
             <div>
                 <h2 class="text-4xl font-bold mb-6">Our Story</h2>
-                <p class="text-slate-300 mb-4 px-1">EcoRefill was founded in 2020 by a group of environmental enthusiasts who saw a problem: the world generates 381 million tons of plastic waste annually, yet simple solutions weren't accessible to everyday people.</p>
-                <p class="text-slate-300 mb-4 px-1">We started with a simple mission: make sustainable living accessible, affordable, and convenient for everyone. Today, we're proud to serve over 50,000 members who have collectively saved 2.4 million kilograms of plastic from landfills.</p>
-                <p class="text-slate-300 px-1">Our platform empowers people to shop responsibly, track their environmental impact in real-time, and become part of a global movement toward zero-waste living.</p>
+                <p class="text-slate-300 mb-4 px-1">EcoRefill was founded in 2020 by a group of environmental
+                    enthusiasts who saw a problem: the world generates 381 million tons of plastic waste annually, yet
+                    simple solutions weren't accessible to everyday people.</p>
+                <p class="text-slate-300 mb-4 px-1">We started with a simple mission: make sustainable living
+                    accessible, affordable, and convenient for everyone. Today, we're proud to serve over 50,000 members
+                    who have collectively saved 2.4 million kilograms of plastic from landfills.</p>
+                <p class="text-slate-300 px-1">Our platform empowers people to shop responsibly, track their
+                    environmental impact in real-time, and become part of a global movement toward zero-waste living.
+                </p>
             </div>
             <div class="relative group h-64 lg:h-[450px]">
-                <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000">
+                </div>
                 <div class="relative h-full overflow-hidden rounded-3xl border border-emerald-500/20 shadow-2xl">
-                    <img src="assets/about.png" alt="EcoRefill Building Change" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                    <img src="assets/about.png" alt="EcoRefill Building Change"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                         <div>
                             <p class="text-emerald-400 font-bold text-sm uppercase tracking-widest mb-2">Our Vision</p>
                             <h3 class="text-white text-2xl font-bold">Building Change Together</h3>
@@ -116,27 +145,31 @@
         <!-- Core Values -->
         <div class="mb-20">
             <h2 class="text-4xl font-bold text-center mb-12">Our Core Values</h2>
-            
+
             <div class="grid md:grid-cols-4 gap-6">
-                <div class="p-8 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition text-center">
+                <div
+                    class="p-8 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition text-center">
                     <div class="text-5xl mb-4">🌱</div>
                     <h3 class="text-xl font-bold mb-3">Sustainability</h3>
                     <p class="text-slate-400 text-sm">Our planet comes first in every decision we make</p>
                 </div>
 
-                <div class="p-8 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition text-center">
+                <div
+                    class="p-8 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition text-center">
                     <div class="text-5xl mb-4">💚</div>
                     <h3 class="text-xl font-bold mb-3">Community</h3>
                     <p class="text-slate-400 text-sm">We believe change happens when we work together</p>
                 </div>
 
-                <div class="p-8 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition text-center">
+                <div
+                    class="p-8 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition text-center">
                     <div class="text-5xl mb-4">💡</div>
                     <h3 class="text-xl font-bold mb-3">Innovation</h3>
                     <p class="text-slate-400 text-sm">We continuously improve to serve you better</p>
                 </div>
 
-                <div class="p-8 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition text-center">
+                <div
+                    class="p-8 bg-slate-800/50 border border-emerald-500/20 rounded-2xl hover:border-emerald-500 transition text-center">
                     <div class="text-5xl mb-4">🤝</div>
                     <h3 class="text-xl font-bold mb-3">Transparency</h3>
                     <p class="text-slate-400 text-sm">We're honest about our impact and challenges</p>
@@ -147,7 +180,7 @@
         <!-- Timeline -->
         <div class="mb-20">
             <h2 class="text-4xl font-bold text-center mb-12">Our Journey</h2>
-            
+
             <div class="space-y-8 max-w-2xl mx-auto">
                 <div class="flex gap-6">
                     <div class="flex flex-col items-center">
@@ -197,11 +230,14 @@
         <!-- Team -->
         <div class="mb-20">
             <h2 class="text-4xl font-bold text-center mb-12">Meet Our Leadership</h2>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="w-32 h-32 rounded-full border-2 border-emerald-500/30 mx-auto mb-4 overflow-hidden relative group">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Arun Khanna" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="w-32 h-32 rounded-full border-2 border-emerald-500/30 mx-auto mb-4 overflow-hidden relative group">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+                            alt="Arun Khanna"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h3 class="text-xl font-bold">Arun Khanna</h3>
                     <p class="text-emerald-400 font-semibold">Founder & CEO</p>
@@ -209,8 +245,11 @@
                 </div>
 
                 <div class="text-center">
-                    <div class="w-32 h-32 rounded-full border-2 border-emerald-500/30 mx-auto mb-4 overflow-hidden relative group">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" alt="Priya Singh" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="w-32 h-32 rounded-full border-2 border-emerald-500/30 mx-auto mb-4 overflow-hidden relative group">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80"
+                            alt="Priya Singh"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h3 class="text-xl font-bold">Priya Singh</h3>
                     <p class="text-emerald-400 font-semibold">Operations Director</p>
@@ -218,8 +257,11 @@
                 </div>
 
                 <div class="text-center">
-                    <div class="w-32 h-32 rounded-full border-2 border-emerald-500/30 mx-auto mb-4 overflow-hidden relative group">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Rohan Patel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="w-32 h-32 rounded-full border-2 border-emerald-500/30 mx-auto mb-4 overflow-hidden relative group">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80"
+                            alt="Rohan Patel"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h3 class="text-xl font-bold">Rohan Patel</h3>
                     <p class="text-emerald-400 font-semibold">Technology Lead</p>
@@ -229,9 +271,10 @@
         </div>
 
         <!-- Impact -->
-        <div class="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 border border-emerald-500 rounded-2xl p-12 text-center">
+        <div
+            class="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 border border-emerald-500 rounded-2xl p-12 text-center">
             <h2 class="text-4xl font-bold mb-8">Our Impact So Far</h2>
-            
+
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <div class="text-5xl font-bold text-emerald-400 mb-2">2.4M</div>
@@ -258,8 +301,10 @@
         <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-16">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <div>
-                    <a href="index.html" class="flex items-center mb-4 shrink-0 inline-block hover:scale-105 transition-transform duration-300">
-                        <img src="assets/logo.png" alt="EcoRefill Logo" class="h-16 md:h-20 lg:h-24 xl:h-32 w-auto max-w-none">
+                    <a href="index.html"
+                        class="flex items-center mb-4 shrink-0 inline-block hover:scale-105 transition-transform duration-300">
+                        <img src="assets/logo1.png" alt="EcoRefill Logo"
+                            class="h-20 md:h-24 lg:h-32 xl:h-40 w-auto max-w-none">
                     </a>
                     <p class="text-sm text-slate-400 mb-4">Refill. Reuse. Reduce.</p>
                     <p class="text-xs text-slate-500">Building a zero-waste future, one refill at a time.</p>
@@ -320,4 +365,5 @@
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
